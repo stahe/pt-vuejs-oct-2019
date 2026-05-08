@@ -1,0 +1,1233 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Uma introdução ao framework Vue.js através de exemplos">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/pt-vuejs-oct-2019/projeto-vuejs-01-o-basico.html">
+      
+      
+        <link rel="prev" href="configurar-um-ambiente-de-desenvolvimento.html">
+      
+      
+        <link rel="next" href="projeto-vuejs-02-utilizacao-da-estrutura-css-bootstrap.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>3. Projeto [vuejs-01]: O Básico - Uma introdução ao framework Vue.js através de exemplos</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "Uma introdução ao framework Vue.js através de exemplos";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3-projeto-vuejs-01-o-basico" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Uma introdução ao framework Vue.js através de exemplos" class="md-header__button md-logo" aria-label="Uma introdução ao framework Vue.js através de exemplos" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Uma introdução ao framework Vue.js através de exemplos
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3. Projeto [vuejs-01]: O Básico
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Mudar para modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Mudar para modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://stahe.github.io/pt-vuejs-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Uma introdução ao framework Vue.js através de exemplos" class="md-nav__button md-logo" aria-label="Uma introdução ao framework Vue.js através de exemplos" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Uma introdução ao framework Vue.js através de exemplos
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://stahe.github.io/pt-vuejs-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bem-vindos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="introducao-ao-framework-vuejs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introdução ao framework VUE.JS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="configurar-um-ambiente-de-desenvolvimento.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Configurar um ambiente de desenvolvimento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="projeto-vuejs-01-o-basico.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Projeto [vuejs-01]: O Básico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="projeto-vuejs-02-utilizacao-da-estrutura-css-bootstrap.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Projeto [vuejs-02]: Utilização da estrutura CSS Bootstrap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="projeto-vuejs-03-tratamento-de-eventos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Projeto [vuejs-03]: Tratamento de Eventos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="projeto-vuejs-04-diretivas-v-model-v-bind-propriedades-computadas-formulario-de-entrada.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. projeto [vuejs-04]: diretivas [v-model, v-bind], propriedades computadas, formulário de entrada
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="projeto-vuejs-05-diretiva-v-for.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Projeto [vuejs-05]: diretiva [v-for]
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="projeto-vuejs-06-definindo-o-layout-de-uma-vista-com-slots.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. projeto [vuejs-06]: definindo o layout de uma vista com slots
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="projeto-vuejs-07-propagacao-de-eventos-na-hierarquia-de-componentes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. projeto [vuejs-07]: propagação de eventos na hierarquia de componentes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="projeto-vuejs-08-eventos-independentes-da-hierarquia-de-componentes-ciclo-de-vida-dos-componentes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Projeto [vuejs-08]: Eventos independentes da hierarquia de componentes, ciclo de vida dos componentes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="projeto-vuejs-09-utilizacao-de-um-plugin-eventbus.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Projeto [vuejs-09]: Utilização de um plugin [eventBus]
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="projeto-vuejs-10-plugin-dao-pedidos-http-assincronos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Projeto [vuejs-10]: plugin [dao], pedidos HTTP assíncronos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="projeto-vuejs-11-roteamento-e-navegacao.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Projeto [vuejs-11]: roteamento e navegação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="projeto-vuejs-12-gestao-de-tabelas-html.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Projeto [vuejs-12]: Gestão de tabelas HTML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="projeto-vuejs-13-atualizacao-de-um-componente-utilizando-uma-sessao.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. Projeto [vuejs-13]: Atualização de um componente, utilizando uma sessão
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="projeto-vuejs-14-tornar-a-sessao-reativa.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16. Projeto [vuejs-14]: Tornar a sessão reativa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="projeto-vuejs-15-utilizacao-do-plugin-vuex.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17. Projeto [vuejs-15]: Utilização do plugin [Vuex]
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cliente-vuejs-do-servidor-de-calculo-de-impostos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18. Cliente Vue.js do servidor de cálculo de impostos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="melhorias-no-cliente-vuejs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19. Melhorias no cliente Vue.js
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="implementacao-da-aplicacao-clienteservidor-num-servico-de-alojamento.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    20. Implementação da aplicação cliente/servidor num serviço de alojamento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><a id="refheadingtoc2479492728496130"></a></p>
+<h1 id="3-projeto-vuejs-01-o-basico">3. <span style="color: #365f91"><strong>Projeto</strong> [vuejs-01]<strong>: O Básico</strong></span></h1>
+<p>Para explicar o código executado em <strong>[vuejs-00],</strong> vamos simplificá-lo em <strong>[vuejs-01]</strong>. Duplicamos a pasta <strong>[vuejs-00]</strong> para <strong>[vuejs-01]</strong>:</p>
+<p><img src="images/100000000000044500000366DD4C062F.png" width="328" height="261" style="width:8.67cm;height:6.9cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000044500000366DD4C062F.png" /></p>
+<p>O projeto <strong>[vuejs-01]</strong> consiste essencialmente em quatro ficheiros:</p>
+<ul>
+  <li><b>[main.js] [2] </b>é o ponto de entrada do projeto;
+  </li>
+  <li><b>[App.vue, HelloWorld.vue] [3-4] </b>são componentes<b> [Vue.js]</b>, contendo opcionalmente os seguintes elementos:
+    <ul>
+      <li><b>[&lt;template&gt;...&lt;/template&gt;]</b>: código HTML;
+      </li>
+      <li><b>[&lt;script&gt;...&lt;/script&gt;]</b>: o código JavaScript associado ao código HTML;
+      </li>
+      <li><b>[&lt;style&gt;...&lt;/style&gt;]</b>: os estilos CSS associados ao código HTML;
+      </li>
+    </ul>
+  </li>
+  <li><b>[public/index.html] [5]</b>: o documento HTML apresentado pelo comando<b> [npm run serve]</b>;
+  </li>
+</ul>
+
+<p>O ficheiro <strong>[public/index.html]</strong> apresentado quando o projeto é executado é este:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">!DOCTYPE</span><span style="color:#000000"> </span><span style="color:#ff0000">html</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">html</span><span style="color:#000000"> </span><span style="color:#ff0000">lang</span><span style="color:#0000ff">=&quot;en&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">head</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">meta</span><span style="color:#000000"> </span><span style="color:#ff0000">charset</span><span style="color:#0000ff">=&quot;utf-8&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">meta</span><span style="color:#000000"> </span><span style="color:#ff0000">http-equiv</span><span style="color:#0000ff">=&quot;X-UA-Compatible&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">content</span><span style="color:#0000ff">=&quot;IE=edge&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">meta</span><span style="color:#000000"> </span><span style="color:#ff0000">name</span><span style="color:#0000ff">=&quot;viewport&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">content</span><span style="color:#0000ff">=&quot;width=device-width,initial-scale=1.0&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">link</span><span style="color:#000000"> </span><span style="color:#ff0000">rel</span><span style="color:#0000ff">=&quot;icon&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">href</span><span style="color:#0000ff">=&quot;&lt;%= BASE_URL %&gt;favicon.ico&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">title</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">vuejs</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">title</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">head</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">body</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">noscript</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">strong</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">We&#x27;re sorry but vuejs doesn&#x27;t work properly without JavaScript enabled. Please enable it to continue.</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">strong</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">noscript</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">div</span><span style="color:#000000"> </span><span style="color:#ff0000">id</span><span style="color:#0000ff">=&quot;app&quot;&gt;&lt;/</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- built files will be auto injected --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">body</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">html</span><span style="color:#0000ff">&gt;</span></span></span>
+</code></pre></div>
+
+<p>Este ficheiro HTML, portanto, não exibe nada <strong>de forma estática</strong>. Não há código HTML aqui. A exibição é <strong>dinâmica</strong>: o código JavaScript do projeto irá gerar HTML que substituirá completamente a tag <strong>[&lt;div id=’app’&gt;]</strong> na linha 14. O código HTML gerado pelo JavaScript do projeto e inserido no lugar da tag <strong>[&lt;div&gt;]</strong> na linha 14 provém das tags <strong>[template]</strong> dos componentes <strong>[vue.js]</strong>, os ficheiros com a extensão <strong>[.vue]</strong>.</p>
+<p>O código HTML é inserido dinamicamente na linha 14 pelo seguinte script <strong>[vuejs-01/main.js]</strong>:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Vue </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;vue&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> App </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./App.vue&#x27;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// configuration</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">Vue.config.productionTip = </span><span style="color:#0000ff">false</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// instanciation projet [App]</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">new</span><span style="color:#000000"> Vue({</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  render: h =&gt; h(App),</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">}).$mount(</span><span style="color:#a31515">&#x27;#app&#x27;</span><span style="color:#000000">)</span></span></span>
+</code></pre></div>
+
+<p><strong>Comentários</strong></p>
+<ul>
+  <li>linha 2: o objeto<b> [Vue] </b>é fornecido pela estrutura<b> [vue.js]</b>;
+  </li>
+  <li>linha 3: o objeto<b> [App] </b>é fornecido pelo ficheiro<b> [vuejs-01/App.vue]</b>;
+  </li>
+  <li>linha 6: configuração do objeto<b> [Vue]</b>;
+  </li>
+  <li>Linhas 9–11: Estas são as linhas que:
+    <ul>
+      <li>geram o código HTML da aplicação. Linha 10: o ficheiro<b> [App.vue] </b>gera-o;
+      </li>
+      <li>carregam o código HTML gerado na linha 10 na secção<b> [&lt;div id=&#x27;app&#x27;&gt;&lt;/div&gt;] </b>do ficheiro<b> [public/index.html]</b>;
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Qualquer projeto <strong>[Vue.js]</strong> pode manter o ficheiro <strong>[index.html]</strong> tal como está.</p>
+<p>O ficheiro <strong>[App.vue]</strong> do projeto inicial <strong>[vuejs-00]</strong> é simplificado da seguinte forma no projeto <strong>[vuejs-01]</strong>:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">div</span><span style="color:#000000"> </span><span style="color:#ff0000">id</span><span style="color:#0000ff">=&quot;myApp&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">img</span><span style="color:#000000"> </span><span style="color:#ff0000">alt</span><span style="color:#0000ff">=&quot;Vue logo&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">src</span><span style="color:#0000ff">=&quot;./assets/logo.png&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">HelloWorld</span><span style="color:#000000"> </span><span style="color:#ff0000">msg</span><span style="color:#0000ff">=&quot;Notre première application Vue.js&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> HelloWorld </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;./components/HelloWorld.vue&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  name: </span><span style="color:#a31515">&quot;app&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  components: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    HelloWorld</span><span style="color:#000000"></span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+</code></pre></div>
+
+<p><strong>Comentários</strong></p>
+<ul>
+  <li>Um fragmento<b> [.vue] </b>é composto por, no máximo, três secções:
+    <ul>
+      <li><b>[&lt;template&gt;...&lt;/template&gt;] </b>: código HTML;
+      </li>
+      <li><b>[&lt;script&gt;...&lt;/script&gt;] </b>: código JavaScript associado ao código HTML;
+      </li>
+      <li><b>[&lt;style&gt;...&lt;/style&gt;]</b>: os estilos CSS associados ao código HTML;
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Aqui, não temos uma secção <strong>[style]</strong>.</p>
+<ul>
+  <li>linhas 1–6: o código HTML do fragmento (página, componente, vista, ...);
+  </li>
+  <li>linhas 2-5: a secção<b> [template] </b>pode conter apenas um elemento. Geralmente, colocamos uma secção<b> [div] </b>que engloba todo o HTML do fragmento. Também podemos colocar uma tag &lt;template&gt;;
+  </li>
+  <li>linha 3: uma imagem;
+  </li>
+</ul>
+
+<p><img src="images/10000000000001370000011D7170BF2C.png" width="109" height="100" style="width:2.88cm;height:2.639cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001370000011D7170BF2C.png" /></p>
+<ul>
+  <li>linha 4: um componente chamado <b>[HelloWorld]</b>. O princípio do <b>[Vue.js] </b>é construir páginas web utilizando fragmentos definidos em ficheiros<b> [.vue]</b>, como o<b> [App.vue] </b>aqui. Este componente é definido pelo ficheiro<b> [HelloWorld.vue] </b>definido na linha 9 do script JavaScript associado;
+  </li>
+  <li>linha 4: um componente pode aceitar parâmetros. O parâmetro aqui é o atributo<b> [msg]</b>;
+  </li>
+  <li>linhas 8–17: o script JavaScript para o fragmento (ou componente);
+  </li>
+  <li>linha 9: para utilizar o componente<b> [HelloWorld] </b>dentro do componente<b> [App]</b>, a sua definição deve ser importada para a secção<b> [script]</b>;
+  </li>
+  <li>linhas 11–16: o script define um objeto e exporta-o para o tornar disponível externamente;
+  </li>
+  <li>linha 12: o atributo<b> [name] </b>define o nome do componente exportado;
+  </li>
+  <li>linhas 13–15: o atributo<b> [components] </b>lista os componentes utilizados pelo componente<b> [App]</b>. Estes são exportados juntamente com ele;
+  </li>
+</ul>
+
+<p>Linha 9: O componente <strong>[HelloWorld]</strong> não tem de ter o mesmo nome que o ficheiro que o define. Poderia ser importado como <strong>[X]</strong> e exportado como o componente <strong>[Bonjour]</strong>:</p>
+<p><img src="images/10000000000003F700000322A4C5E0AD.png" width="355" height="281" style="width:9.402cm;height:7.43cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003F700000322A4C5E0AD.png" /></p>
+<ul>
+  <li>Linha 14: O componente<b> [X] </b>é exportado com o nome <b>[Bonjour]</b>. É então utilizado com esse nome, na linha 4;
+  </li>
+</ul>
+
+<p>A primeira versão é a mais comum, por isso definiremos os nossos componentes desta forma;</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">div</span><span style="color:#000000"> </span><span style="color:#ff0000">id</span><span style="color:#0000ff">=&quot;myApp&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">img</span><span style="color:#000000"> </span><span style="color:#ff0000">alt</span><span style="color:#0000ff">=&quot;Vue logo&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">src</span><span style="color:#0000ff">=&quot;./assets/logo.png&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">HelloWorld</span><span style="color:#000000"> </span><span style="color:#ff0000">msg</span><span style="color:#0000ff">=&quot;Notre première application Vue.js&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> HelloWorld </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;./components/HelloWorld.vue&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  name: </span><span style="color:#a31515">&quot;app&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  components: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    HelloWorld</span><span style="color:#000000"></span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+</code></pre></div>
+
+<p>A linha 14 é uma forma abreviada do código <strong>[HelloWorld : HelloWorld]</strong>: o componente <strong>[HelloWorld]</strong> (à direita, importado na linha 9) é exportado com o nome <strong>[HelloWorld]</strong> (à esquerda).</p>
+<p><img src="images/10000000000001350000014894FDE6BC.png" width="108" height="115" style="width:2.859cm;height:3.036cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001350000014894FDE6BC.png" /></p>
+<p>Simplificamos o componente <strong>[HelloWorld.vue]</strong> da seguinte forma:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h1</span><span style="color:#0000ff">&gt;</span><span style="font-weight:bold;color:#000000">{{</span><span style="color:#000000"> </span><span style="color:#800080">msg</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#000000">}}</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h1</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  name: </span><span style="color:#a31515">&quot;HelloWorld&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  props: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    msg: String</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
+</code></pre></div>
+
+<p><strong>Comentários</strong></p>
+<ul>
+  <li>O componente<b> [HelloWorld] </b>tem a mesma estrutura de ficheiros que o componente principal <b>[App]</b>;
+  </li>
+  <li>linha 3: avalia uma expressão JavaScript, neste caso a expressão <b>[msg]</b>;
+  </li>
+  <li>linhas 10–12: definem as propriedades do componente, mais especificamente os seus parâmetros. Quando o componente<b> [App] </b>instanciou um componente<b> [HelloWorld]</b>, fê-lo utilizando a seguinte sintaxe:
+  </li>
+</ul>
+
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">HelloWorld</span><span style="color:#000000"> </span><span style="color:#ff0000">msg</span><span style="color:#0000ff">=&quot;Notre première application Vue.js&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+</code></pre></div>
+
+<p>O componente <strong>[HelloWorld]</strong> é instanciado através da atribuição de um valor ao parâmetro (atributo) <strong>[msg]</strong>. Se analisarmos o <strong>[template]</strong> do componente <strong>[HelloWorld]</strong>, obtemos:</p>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h1</span><span style="color:#0000ff">&gt;Notre première application Vue.js&lt;/</span><span style="color:#800000">h1</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
+</code></pre></div>
+
+<ul>
+  <li>linhas 7–14: as propriedades do componente definidas como um objeto que é exportado;
+    <ul>
+      <li>linha 9: o componente é exportado com o nome <b>[HelloWorld]</b>;
+      </li>
+      <li>linhas 10–12: os seus parâmetros são definidos pela propriedade<b> [props]</b>;
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Por fim, se combinarmos os modelos dos dois componentes <strong>[App, HelloWorld]</strong> utilizados, o ficheiro <strong>[index.html]</strong> apresentado será o seguinte:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">!DOCTYPE</span><span style="color:#000000"> </span><span style="color:#ff0000">html</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">html</span><span style="color:#000000"> </span><span style="color:#ff0000">lang</span><span style="color:#0000ff">=&quot;en&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">head</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">meta</span><span style="color:#000000"> </span><span style="color:#ff0000">charset</span><span style="color:#0000ff">=&quot;utf-8&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">meta</span><span style="color:#000000"> </span><span style="color:#ff0000">http-equiv</span><span style="color:#0000ff">=&quot;X-UA-Compatible&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">content</span><span style="color:#0000ff">=&quot;IE=edge&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">meta</span><span style="color:#000000"> </span><span style="color:#ff0000">name</span><span style="color:#0000ff">=&quot;viewport&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">content</span><span style="color:#0000ff">=&quot;width=device-width,initial-scale=1.0&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">link</span><span style="color:#000000"> </span><span style="color:#ff0000">rel</span><span style="color:#0000ff">=&quot;icon&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">href</span><span style="color:#0000ff">=&quot;&lt;%= BASE_URL %&gt;favicon.ico&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">title</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">vuejs</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">title</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">head</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">body</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">noscript</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">strong</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">We&#x27;re sorry but vuejs doesn&#x27;t work properly without JavaScript enabled. Please enable it to continue.</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">strong</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">noscript</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">div</span><span style="color:#000000"> </span><span style="color:#ff0000">id</span><span style="color:#0000ff">=&quot;myApp&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">img</span><span style="color:#000000"> </span><span style="color:#ff0000">alt</span><span style="color:#0000ff">=&quot;Vue logo&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">src</span><span style="color:#0000ff">=&quot;./assets/logo.png&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h1</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Notre première application Vue.js</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h1</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;&lt;/</span><span style="color:#800000">body</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">html</span><span style="color:#0000ff">&gt;</span></span></span>
+</code></pre></div>
+
+<p>Iniciamos a aplicação modificando o comando <strong>[serve] [1]</strong> no ficheiro <strong>[package.json]</strong>:</p>
+<p><img src="images/100000000000081C0000029C213051F8.png" width="623" height="200" style="width:16.482cm;height:5.302cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000081C0000029C213051F8.png" /></p>
+<p>A página apresentada é então <strong>[2]</strong>.</p>
+<p>Agora, vamos ver o código desta página:</p>
+<p><img src="images/100000000000077B00000295864F5236.png" width="670" height="231" style="width:17.731cm;height:6.121cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000077B00000295864F5236.png" /></p>
+<ul>
+  <li>Em <b>[1]</b>, <b>clique com o botão direito do rato</b>;
+  </li>
+  <li>em <b>[2]</b>, o código-fonte da página. Podemos ver que este é o código do ficheiro inicial <b>[index.html]</b>, e não foi isso que foi apresentado. Foi, de facto, a página<b> [index.html] </b>que foi carregada inicialmente. Depois, dinamicamente, o código JavaScript modificou esta página, mas isso não nos é mostrado;
+  </li>
+</ul>
+
+<p>Quando as páginas são geradas dinamicamente por JavaScript, a opção <strong>[2]</strong> é inútil. Deve aceder às ferramentas do navegador (F12 no Firefox) para visualizar o código da página atualmente apresentada:</p>
+<p><img src="images/10000000000003D700000423F1048BC4.png" width="344" height="371" style="width:9.102cm;height:9.805cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003D700000423F1048BC4.png" /></p>
+<ul>
+  <li>em <b>[1]</b>, o inspetor DOM (Document Object Model) para o documento exibido;
+  </li>
+  <li>em <b>[2]</b>, o que este DOM realmente contém;
+  </li>
+  <li><b>[3-4]</b>, ferramentas que utilizaremos para visualizar os objetos JavaScript utilizados pela estrutura<b> [Vue.js]</b>;
+  </li>
+  <li><b>[4] </b>é uma extensão (aqui para o Firefox) para depurar aplicações<b> [Vue.js]</b>:
+    <ul>
+      <li>para o Firefox: <b>[https://addons.mozilla.org/fr/firefox/addon/vue-js-devtools/]</b>;
+      </li>
+      <li>para o Chrome: <b>[https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd]</b>;
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Vamos examinar o separador <strong>[Vue] [4]</strong>:</p>
+<p><img src="images/10000000000007F70000028B2332E881.png" width="612" height="195" style="width:16.18cm;height:5.166cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007F70000028B2332E881.png" /></p>
+<p>A vista <strong>[1-4]</strong> mostra-nos a estrutura <strong>[Vue.js]</strong> do documento: a raiz do documento <strong>[2]</strong> (index.html) contém o componente <strong>[App]</strong> (3), que, por sua vez, contém o componente <strong>[HelloWorld]</strong> (4). Ao clicar em <strong>[4],</strong> são apresentadas as propriedades do componente <strong>[HelloWorld] [5]</strong>.</p>
+<p>Em <strong>[4]</strong> (à direita), vemos o indicador <strong>[$vm0]</strong>. Este é o nome da variável que podemos usar na consola JavaScript <strong>[6]</strong> para nos referirmos ao objeto <strong>[HelloWorld]</strong>. Vamos fazer isso:</p>
+<p><img src="images/100000000000050D00000364B1481999.png" width="452" height="304" style="width:11.972cm;height:8.036cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000050D00000364B1481999.png" /></p>
+<ul>
+  <li>Em <b>[2]</b>, avaliamos a expressão <b>[$vm0]</b>, que exibe a sua estrutura. Normalmente, não precisaremos de utilizar esta estrutura diretamente;
+  </li>
+</ul>
+
+<p>Vamos terminar demonstrando a capacidade de <strong>[recarregamento a quente]</strong> do comando <strong>[serve]</strong> usado para executar o projeto:</p>
+<ul>
+  <li>Em <b>[App.vue]</b>, altere a mensagem exibida para <b>[HelloWorld]</b>:
+  </li>
+</ul>
+
+<p><img src="images/1000000000000811000002A06D4FC083.png" width="620" height="202" style="width:16.392cm;height:5.334cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000811000002A06D4FC083.png" /></p>
+<ul>
+  <li>Em <b>[1]</b>, modificamos a mensagem exibida;
+  </li>
+  <li>em <b>[2-3]</b>, a página é atualizada automaticamente sem qualquer ação da nossa parte;
+  </li>
+</ul>
+
+<p>Iremos agora criar vários projetos <strong>[vuejs-xx]</strong> para ilustrar as funcionalidades principais do <strong>[Vue.js]</strong>. Por «principais», entendemos «funcionalidades que iremos utilizar no cliente <strong>[Vue.js]</strong> do servidor de cálculo de impostos». Outras funcionalidades «principais» serão omitidas se não forem utilizadas no cliente. Por conseguinte, isto não pretende ser uma apresentação exaustiva do <strong>[Vue.js]</strong>.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
+        </a>
+        <br>
+        Este tutorial, escrito por <strong>Serge Tahé</strong>, é disponibilizado ao público sob os termos da
+<em>Creative Commons Atribuição – Não comercial –
+Partilha igual 3.0 sem adaptações</em>.
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>
