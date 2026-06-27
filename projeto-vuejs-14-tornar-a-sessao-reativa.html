@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://stahe.github.io/pt-vuejs-oct-2019/projeto-vuejs-14-tornar-a-sessao-reativa.html">
       
       
-        <link rel="prev" href="projeto-vuejs-13-atualizacao-de-um-componente-utilizando-uma-sessao.html">
+        <link rel="prev" href="projeto-vuejs-13-atualizacao-de-um-componente-utilizacao-de-uma-sessao.html">
       
       
         <link rel="next" href="projeto-vuejs-15-utilizacao-do-plugin-vuex.html">
@@ -29,7 +29,7 @@
     
     
       
-        <title>16. Projeto [vuejs-14]: Tornar a sessão reativa - Uma introdução ao framework Vue.js através de exemplos</title>
+        <title>16. Projeto [vuejs-14]: tornar a sessão reativa - Uma introdução ao framework Vue.js através de exemplos</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              16. Projeto [vuejs-14]: Tornar a sessão reativa
+              16. Projeto [vuejs-14]: tornar a sessão reativa
             
           </span>
         </div>
@@ -330,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="configurar-um-ambiente-de-desenvolvimento.html" class="md-nav__link">
+      <a href="criacao-de-um-ambiente-de-trabalho.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. Configurar um ambiente de desenvolvimento
+    2. Criação de um ambiente de trabalho
   
 
     
@@ -357,14 +359,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-01-o-basico.html" class="md-nav__link">
+      <a href="projeto-vuejs-01-os-fundamentos.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Projeto [vuejs-01]: O Básico
+    3. projeto [vuejs-01]: os fundamentos
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-02-utilizacao-da-estrutura-css-bootstrap.html" class="md-nav__link">
+      <a href="projeto-vuejs-02-utilizacao-do-framework-bootstrap-css.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Projeto [vuejs-02]: Utilização da estrutura CSS Bootstrap
+    4. Projeto [vuejs-02]: utilização do framework Bootstrap CSS
   
 
     
@@ -411,14 +413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-03-tratamento-de-eventos.html" class="md-nav__link">
+      <a href="projeto-vuejs-03-gestao-de-eventos.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. Projeto [vuejs-03]: Tratamento de Eventos
+    5. Projeto [vuejs-03]: gestão de eventos
   
 
     
@@ -438,14 +440,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-04-diretivas-v-model-v-bind-propriedades-computadas-formulario-de-entrada.html" class="md-nav__link">
+      <a href="projeto-vuejs-04-diretrizes-v-model-v-bind-atributos-calculados-formulario-de-introducao-de-dados.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. projeto [vuejs-04]: diretivas [v-model, v-bind], propriedades computadas, formulário de entrada
+    6. projeto [vuejs-04]: diretrizes [v-model, v-bind], atributos calculados, formulário de introdução de dados
   
 
     
@@ -472,7 +474,7 @@
   <span class="md-ellipsis">
     
   
-    7. Projeto [vuejs-05]: diretiva [v-for]
+    7. projeto [vuejs-05]: diretiva [v-for]
   
 
     
@@ -492,14 +494,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-06-definindo-o-layout-de-uma-vista-com-slots.html" class="md-nav__link">
+      <a href="projeto-vuejs-06-formatacao-de-uma-vista-com-slots.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    8. projeto [vuejs-06]: definindo o layout de uma vista com slots
+    8. projeto [vuejs-06]: formatação de uma vista com slots
   
 
     
@@ -519,14 +521,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-07-propagacao-de-eventos-na-hierarquia-de-componentes.html" class="md-nav__link">
+      <a href="projeto-vuejs-07-transmissao-de-eventos-na-hierarquia-de-componentes.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. projeto [vuejs-07]: propagação de eventos na hierarquia de componentes
+    9. Projeto [vuejs-07]: transmissão de eventos na hierarquia de componentes
   
 
     
@@ -553,7 +555,7 @@
   <span class="md-ellipsis">
     
   
-    10. Projeto [vuejs-08]: Eventos independentes da hierarquia de componentes, ciclo de vida dos componentes
+    10. projeto [vuejs-08]: eventos independentes da hierarquia de componentes, ciclo de vida dos componentes
   
 
     
@@ -580,7 +582,7 @@
   <span class="md-ellipsis">
     
   
-    11. Projeto [vuejs-09]: Utilização de um plugin [eventBus]
+    11. projeto [vuejs-09]: utilização de um plugin [eventBus]
   
 
     
@@ -600,14 +602,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-10-plugin-dao-pedidos-http-assincronos.html" class="md-nav__link">
+      <a href="projeto-vuejs-10-plugin-dao-pedidos-assincronos-http.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. Projeto [vuejs-10]: plugin [dao], pedidos HTTP assíncronos
+    12. Projeto [vuejs-10]: plugin [dao], pedidos assíncronos HTTP
   
 
     
@@ -634,7 +636,7 @@
   <span class="md-ellipsis">
     
   
-    13. Projeto [vuejs-11]: roteamento e navegação
+    13. projeto [vuejs-11]: roteamento e navegação
   
 
     
@@ -654,14 +656,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-12-gestao-de-tabelas-html.html" class="md-nav__link">
+      <a href="projeto-vuejs-12-gestao-das-tabelas-html.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Projeto [vuejs-12]: Gestão de tabelas HTML
+    14. Projeto [vuejs-12]: gestão das tabelas HTML
   
 
     
@@ -681,14 +683,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-13-atualizacao-de-um-componente-utilizando-uma-sessao.html" class="md-nav__link">
+      <a href="projeto-vuejs-13-atualizacao-de-um-componente-utilizacao-de-uma-sessao.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. Projeto [vuejs-13]: Atualização de um componente, utilizando uma sessão
+    15. projeto [vuejs-13]: atualização de um componente, utilização de uma sessão
   
 
     
@@ -724,7 +726,7 @@
   <span class="md-ellipsis">
     
   
-    16. Projeto [vuejs-14]: Tornar a sessão reativa
+    16. Projeto [vuejs-14]: tornar a sessão reativa
   
 
     
@@ -742,7 +744,7 @@
   <span class="md-ellipsis">
     
   
-    16. Projeto [vuejs-14]: Tornar a sessão reativa
+    16. Projeto [vuejs-14]: tornar a sessão reativa
   
 
     
@@ -823,10 +825,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#166-executar-o-projeto" class="md-nav__link">
+  <a href="#166-execucao-do-projeto" class="md-nav__link">
     <span class="md-ellipsis">
       
-        16.6. Executar o projeto
+        16.6. Execução do projeto
       
     </span>
   </a>
@@ -855,7 +857,7 @@
   <span class="md-ellipsis">
     
   
-    17. Projeto [vuejs-15]: Utilização do plugin [Vuex]
+    17. Projeto [vuejs-15]: utilização do plugin [Vuex]
   
 
     
@@ -929,14 +931,14 @@
   
   
     <li class="md-nav__item">
-      <a href="implementacao-da-aplicacao-clienteservidor-num-servico-de-alojamento.html" class="md-nav__link">
+      <a href="implantacao-da-aplicacao-clienteservidor-num-servico-de-alojamento.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    20. Implementação da aplicação cliente/servidor num serviço de alojamento
+    20. Implantação da aplicação cliente/servidor num serviço de alojamento
   
 
     
@@ -966,49 +968,49 @@
 
 
 
-<p><a id="refheadingtoc7730421135184966"></a></p>
-<h1 id="16-projeto-vuejs-14-tornar-a-sessao-reativa">16. <span style="color: #365f91"><strong>Projeto</strong> [vuejs-14]<strong>: Tornar a sessão reativa</strong></span></h1>
-<p>Vimos que o objeto <strong>[session]</strong> utilizado no projeto anterior tinha propriedades <strong>não reativas</strong>: se as modificarmos, as vistas que utilizam essas propriedades não são atualizadas. É possível ter um objeto [session] reativo se o armazenarmos nos dados reativos das vistas. É isso que o projeto [vuejs-14] demonstra.</p>
-<p>A estrutura de diretórios do projeto é a seguinte:</p>
-<p><img src="images/10000000000001740000014D42EFA022.png" width="130" height="116" style="width:3.44cm;height:3.08cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001740000014D42EFA022.png" /></p>
-<p><a id="refheadingtoc24809527284961301"></a></p>
+<p><span id="refheadingtoc7730421135184966" name="refheadingtoc7730421135184966" class="odt-bookmark-anchor"></span></p>
+<h1 id="16-projeto-vuejs-14-tornar-a-sessao-reativa">16. <span style="color: #365f91"><strong>Projeto</strong> [vuejs-14]<strong>: tornar a sessão reativa</strong></span></h1>
+<p>Vimos que o objeto <strong>[session]</strong> utilizado no projeto anterior tinha propriedades <strong>não reativas</strong>: se as alterarmos, as vistas que utilizam essas propriedades não são atualizadas. É possível ter um objeto [session] reativo se o armazenarmos nos dados reativos das vistas. É isso que demonstra o projeto [vuejs-14].</p>
+<p>A estrutura do projeto é a seguinte:</p>
+<p><img src="images/10000000000001740000014D42EFA022.png" width="130" height="116" style="width:3.44cm;height:3.082cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001740000014D42EFA022.png" /></p>
+<p><span id="refheadingtoc24809527284961301" name="refheadingtoc24809527284961301" class="odt-bookmark-anchor"></span></p>
 <h2 id="161-o-objeto-session">16.1. <span style="color: #4f81bd"><strong>O objeto</strong> [session]</span></h2>
-<p>O objeto <strong>[session]</strong> partilhado por todos os componentes não se altera.</p>
-<p><a id="refheadingtoc24809727284961301"></a></p>
-<h2 id="162-o-plugin-pluginspluginsession">16.2. <span style="color: #4f81bd">O plugin [./plugins/pluginSession]</span></h2>
-<p>O script <strong>[pluginSession]</strong> não se altera. O objeto <strong>[session]</strong> partilhado está disponível na propriedade <strong>[$session]</strong> de todos os componentes.</p>
-<p><a id="refheadingtoc24809927284961301"></a></p>
+<p>O objeto <strong>[session],</strong> partilhado por todos os componentes, não sofre alterações.</p>
+<p><span id="refheadingtoc24809727284961301" name="refheadingtoc24809727284961301" class="odt-bookmark-anchor"></span></p>
+<h2 id="162-o-plugin-pluginspluginsession">16.2. <span style="color: #4f81bd"><strong>O plugin [./plugins/pluginSession]</strong></span></h2>
+<p>O script <strong>[pluginSession]</strong> não sofre alterações. O objeto partilhado <strong>[session]</strong> está disponível na propriedade <strong>[$session]</strong> de todos os componentes.</p>
+<p><span id="refheadingtoc24809927284961301" name="refheadingtoc24809927284961301" class="odt-bookmark-anchor"></span></p>
 <h2 id="163-o-script-principal-mainjs">16.3. <span style="color: #4f81bd"><strong>O script principal</strong> [main.js]</span></h2>
-<p>O script principal <strong>[main.js]</strong> permanece inalterado.</p>
-<p><a id="refheadingtoc24810127284961301"></a></p>
+<p>O script principal <strong>[main.js]</strong> não sofre alterações.</p>
+<p><span id="refheadingtoc24810127284961301" name="refheadingtoc24810127284961301" class="odt-bookmark-anchor"></span></p>
 <h2 id="164-a-vista-principal-app">16.4. <span style="color: #4f81bd"><strong>A vista principal</strong> [App]</span></h2>
 <p>A vista <strong>[App]</strong> é agora a seguinte:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">div</span><span style="color:#000000"> </span><span style="color:#ff0000">class</span><span style="color:#0000ff">=&quot;container&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-card</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- message --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- mensagem --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;success&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">align</span><span style="color:#0000ff">=&quot;center&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">[vuejs-14] : utilisation d&#x27;un objet partagé entre composants</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- table HTML --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- tabela HTML --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Table</span><span style="color:#0000ff">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-card</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Table </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;./components/Table&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// nom</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// nome</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  name: </span><span style="color:#a31515">&quot;app&quot;</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// composants</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// componentes</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  components: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    Table</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// cycle de vie</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo de vida</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  created() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// génération du tableau des simulations</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// geração da tabela de simulações</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">.$session.generateLignes();</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
@@ -1017,29 +1019,30 @@
 
 <p><strong>Comentários</strong></p>
 <ul>
-  <li>linha 9: o componente<b> [Table] </b>já não emite o evento<b> [updateTable]</b>, que desencadeia a regeneração do componente<b> [Table]</b>. Como resultado, o método [updateTable] foi removido;
+  <li>linha 9: o componente <b>[Table] </b>já não emite o evento <b>[updateTable], </b>que solicita que o componente <b>[Table] </b>seja regenerado. Consequentemente, o método [updateTable] desapareceu;
   </li>
 </ul>
-<p><a id="refheadingtoc24810327284961301"></a></p>
+
+<p><span id="refheadingtoc24810327284961301" name="refheadingtoc24810327284961301" class="odt-bookmark-anchor"></span></p>
 <h2 id="165-o-componente-table">16.5. <span style="color: #4f81bd"><strong>O componente</strong> [Table]</span></h2>
-<p>O componente <strong>[Table]</strong> evolui da seguinte forma:</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<p>O componente <strong>[Table]</strong> sofre as seguintes alterações:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- liste vide --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- lista vazia --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#000000"> </span><span style="color:#ff0000">v-if</span><span style="color:#0000ff">=&quot;lignes.length==0&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;warning&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Votre liste de simulations est vide</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- bouton de rechargement--&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- botão de atualização--&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-button</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;primary&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">@click</span><span style="color:#0000ff">=&quot;rechargerListe&quot;&gt;</span><span style="color:#000000">Recharger la liste</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-button</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- liste non vide--&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- lista não vazia--&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#000000"> </span><span style="color:#ff0000">v-if</span><span style="color:#0000ff">=&quot;lignes.length!=0&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;primary&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">v-if</span><span style="color:#0000ff">=&quot;lignes.length==0&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Liste de vos simulations</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- tableau des simulations --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- tabela de simulações --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-table</span><span style="color:#000000"> </span><span style="color:#ff0000">striped</span><span style="color:#000000"> </span><span style="color:#ff0000">hover</span><span style="color:#000000"> </span><span style="color:#ff0000">responsive</span><span style="color:#000000"> </span><span style="color:#ff0000">:items</span><span style="color:#0000ff">=&quot;lignes&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">:fields</span><span style="color:#0000ff">=&quot;fields&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#000000"> </span><span style="color:#ff0000">v-slot:cell(action)</span><span style="color:#0000ff">=&quot;row&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-button</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;link&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">@click</span><span style="color:#0000ff">=&quot;supprimerLigne(row.index)&quot;&gt;</span><span style="color:#000000">Supprimer</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-button</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -1048,16 +1051,16 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// calculated state</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// estado calculado</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  computed: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    lignes() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> </span><span style="color:#0000ff">this</span><span style="color:#000000">.session.lignes;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// inner state</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// estado interno</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  data() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      fields: [</span></span>
@@ -1071,23 +1074,23 @@
 <span class="odt-code-line"><span class="odt-code-line-content">      session : {}</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    };</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// life cycle</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// ciclo de vida</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  created(){</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">this</span><span style="color:#000000">.session=</span><span style="color:#0000ff">this</span><span style="color:#000000">.$session</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// methods</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// métodos</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  methods: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    supprimerLigne(index) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// eslint-disable-next-line</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      console.log(</span><span style="color:#a31515">&quot;Table supprimerLigne&quot;</span><span style="color:#000000">, index);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// delete the line</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// a linha é eliminada</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">this</span><span style="color:#000000">.session.deleteLigne(index);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// reload displayed list</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// recarregamento da lista apresentada</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    rechargerListe() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// eslint-disable-next-line</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      console.log(</span><span style="color:#a31515">&quot;Table rechargerListe&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// the list of simulations is generated</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// regenera a lista de simulações</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">this</span><span style="color:#000000">.session.generateLignes();</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
@@ -1097,16 +1100,16 @@
 
 <p><strong>Comentários:</strong></p>
 <ul>
-  <li>A nova funcionalidade encontra-se nas linhas 49–51: quando a vista é criada, a sessão [this.$session] é armazenada na propriedade [session] na linha 45. Colocada aqui, a propriedade [session] é reativa;
+  <li>a novidade está nas linhas 49-51: quando a vista é criada, a sessão [this.$session] é armazenada na propriedade [session] da linha 45. Colocada aqui, a propriedade [session] é reativa;
   </li>
-  <li>Linhas 58 e 65: Em vez de usar [this.$session] para adicionar ou remover uma linha da tabela, usamos a propriedade reativa [this.session];
+  <li>linhas 58 e 65: em vez de utilizar [this.$session] para adicionar/eliminar uma linha da tabela, utiliza-se a propriedade reativa [this.session];
   </li>
 </ul>
 
-<p><a id="refheadingtoc24810527284961301"></a></p>
-<h2 id="166-executar-o-projeto">16.6. <span style="color: #4f81bd">Executar o projeto</span></h2>
-<p><img src="images/1000000000000711000001D306C4CF0C.png" width="543" height="140" style="width:14.362cm;height:3.708cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000711000001D306C4CF0C.png" /></p>
-<p>Obtemos os mesmos resultados que no projeto <strong>[vuejs-12]</strong>.</p>
+<p><span id="refheadingtoc24810527284961301" name="refheadingtoc24810527284961301" class="odt-bookmark-anchor"></span></p>
+<h2 id="166-execucao-do-projeto">16.6. <span style="color: #4f81bd">Execução do projeto</span></h2>
+<p><img src="images/1000000000000711000001D306C4CF0C.png" width="543" height="140" style="width:14.362cm;height:3.709cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000711000001D306C4CF0C.png" /></p>
+<p>Obteve-se os mesmos resultados que no projeto <strong>[vuejs-12]</strong>.</p>
 
 
 

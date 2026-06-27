@@ -12,13 +12,13 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/pt-vuejs-oct-2019/projeto-vuejs-06-definindo-o-layout-de-uma-vista-com-slots.html">
+        <link rel="canonical" href="https://stahe.github.io/pt-vuejs-oct-2019/projeto-vuejs-06-formatacao-de-uma-vista-com-slots.html">
       
       
         <link rel="prev" href="projeto-vuejs-05-diretiva-v-for.html">
       
       
-        <link rel="next" href="projeto-vuejs-07-propagacao-de-eventos-na-hierarquia-de-componentes.html">
+        <link rel="next" href="projeto-vuejs-07-transmissao-de-eventos-na-hierarquia-de-componentes.html">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>8. projeto [vuejs-06]: definindo o layout de uma vista com slots - Uma introdução ao framework Vue.js através de exemplos</title>
+        <title>8. projeto [vuejs-06]: formatação de uma vista com slots - Uma introdução ao framework Vue.js através de exemplos</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#8-projeto-vuejs-06-definindo-o-layout-de-uma-vista-com-slots" class="md-skip">
+        <a href="#8-projeto-vuejs-06-formatacao-de-uma-vista-com-slots" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              8. projeto [vuejs-06]: definindo o layout de uma vista com slots
+              8. projeto [vuejs-06]: formatação de uma vista com slots
             
           </span>
         </div>
@@ -330,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="configurar-um-ambiente-de-desenvolvimento.html" class="md-nav__link">
+      <a href="criacao-de-um-ambiente-de-trabalho.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. Configurar um ambiente de desenvolvimento
+    2. Criação de um ambiente de trabalho
   
 
     
@@ -357,14 +359,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-01-o-basico.html" class="md-nav__link">
+      <a href="projeto-vuejs-01-os-fundamentos.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Projeto [vuejs-01]: O Básico
+    3. projeto [vuejs-01]: os fundamentos
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-02-utilizacao-da-estrutura-css-bootstrap.html" class="md-nav__link">
+      <a href="projeto-vuejs-02-utilizacao-do-framework-bootstrap-css.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Projeto [vuejs-02]: Utilização da estrutura CSS Bootstrap
+    4. Projeto [vuejs-02]: utilização do framework Bootstrap CSS
   
 
     
@@ -411,14 +413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-03-tratamento-de-eventos.html" class="md-nav__link">
+      <a href="projeto-vuejs-03-gestao-de-eventos.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. Projeto [vuejs-03]: Tratamento de Eventos
+    5. Projeto [vuejs-03]: gestão de eventos
   
 
     
@@ -438,14 +440,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-04-diretivas-v-model-v-bind-propriedades-computadas-formulario-de-entrada.html" class="md-nav__link">
+      <a href="projeto-vuejs-04-diretrizes-v-model-v-bind-atributos-calculados-formulario-de-introducao-de-dados.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. projeto [vuejs-04]: diretivas [v-model, v-bind], propriedades computadas, formulário de entrada
+    6. projeto [vuejs-04]: diretrizes [v-model, v-bind], atributos calculados, formulário de introdução de dados
   
 
     
@@ -472,7 +474,7 @@
   <span class="md-ellipsis">
     
   
-    7. Projeto [vuejs-05]: diretiva [v-for]
+    7. projeto [vuejs-05]: diretiva [v-for]
   
 
     
@@ -508,7 +510,7 @@
   <span class="md-ellipsis">
     
   
-    8. projeto [vuejs-06]: definindo o layout de uma vista com slots
+    8. projeto [vuejs-06]: formatação de uma vista com slots
   
 
     
@@ -519,14 +521,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="projeto-vuejs-06-definindo-o-layout-de-uma-vista-com-slots.html" class="md-nav__link md-nav__link--active">
+      <a href="projeto-vuejs-06-formatacao-de-uma-vista-com-slots.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    8. projeto [vuejs-06]: definindo o layout de uma vista com slots
+    8. projeto [vuejs-06]: formatação de uma vista com slots
   
 
     
@@ -632,14 +634,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-07-propagacao-de-eventos-na-hierarquia-de-componentes.html" class="md-nav__link">
+      <a href="projeto-vuejs-07-transmissao-de-eventos-na-hierarquia-de-componentes.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. projeto [vuejs-07]: propagação de eventos na hierarquia de componentes
+    9. Projeto [vuejs-07]: transmissão de eventos na hierarquia de componentes
   
 
     
@@ -666,7 +668,7 @@
   <span class="md-ellipsis">
     
   
-    10. Projeto [vuejs-08]: Eventos independentes da hierarquia de componentes, ciclo de vida dos componentes
+    10. projeto [vuejs-08]: eventos independentes da hierarquia de componentes, ciclo de vida dos componentes
   
 
     
@@ -693,7 +695,7 @@
   <span class="md-ellipsis">
     
   
-    11. Projeto [vuejs-09]: Utilização de um plugin [eventBus]
+    11. projeto [vuejs-09]: utilização de um plugin [eventBus]
   
 
     
@@ -713,14 +715,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-10-plugin-dao-pedidos-http-assincronos.html" class="md-nav__link">
+      <a href="projeto-vuejs-10-plugin-dao-pedidos-assincronos-http.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. Projeto [vuejs-10]: plugin [dao], pedidos HTTP assíncronos
+    12. Projeto [vuejs-10]: plugin [dao], pedidos assíncronos HTTP
   
 
     
@@ -747,7 +749,7 @@
   <span class="md-ellipsis">
     
   
-    13. Projeto [vuejs-11]: roteamento e navegação
+    13. projeto [vuejs-11]: roteamento e navegação
   
 
     
@@ -767,14 +769,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-12-gestao-de-tabelas-html.html" class="md-nav__link">
+      <a href="projeto-vuejs-12-gestao-das-tabelas-html.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Projeto [vuejs-12]: Gestão de tabelas HTML
+    14. Projeto [vuejs-12]: gestão das tabelas HTML
   
 
     
@@ -794,14 +796,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-13-atualizacao-de-um-componente-utilizando-uma-sessao.html" class="md-nav__link">
+      <a href="projeto-vuejs-13-atualizacao-de-um-componente-utilizacao-de-uma-sessao.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. Projeto [vuejs-13]: Atualização de um componente, utilizando uma sessão
+    15. projeto [vuejs-13]: atualização de um componente, utilização de uma sessão
   
 
     
@@ -828,7 +830,7 @@
   <span class="md-ellipsis">
     
   
-    16. Projeto [vuejs-14]: Tornar a sessão reativa
+    16. Projeto [vuejs-14]: tornar a sessão reativa
   
 
     
@@ -855,7 +857,7 @@
   <span class="md-ellipsis">
     
   
-    17. Projeto [vuejs-15]: Utilização do plugin [Vuex]
+    17. Projeto [vuejs-15]: utilização do plugin [Vuex]
   
 
     
@@ -929,14 +931,14 @@
   
   
     <li class="md-nav__item">
-      <a href="implementacao-da-aplicacao-clienteservidor-num-servico-de-alojamento.html" class="md-nav__link">
+      <a href="implantacao-da-aplicacao-clienteservidor-num-servico-de-alojamento.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    20. Implementação da aplicação cliente/servidor num serviço de alojamento
+    20. Implantação da aplicação cliente/servidor num serviço de alojamento
   
 
     
@@ -966,15 +968,15 @@
 
 
 
-<p><a id="refheadingtoc240162385722848"></a></p>
-<h1 id="8-projeto-vuejs-06-definindo-o-layout-de-uma-vista-com-slots">8. <span style="color: #365f91"><strong>projeto</strong> [vuejs-06]<strong>: definindo o layout de uma vista com slots</strong></span></h1>
-<p><img src="images/10000000000000EE00000197C8940A10.png" width="83" height="142" style="width:2.2cm;height:3.762cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000EE00000197C8940A10.png" /></p>
-<p><a id="refheadingtoc2479932728496130"></a></p>
+<p><span id="refheadingtoc240162385722848" name="refheadingtoc240162385722848" class="odt-bookmark-anchor"></span></p>
+<h1 id="8-projeto-vuejs-06-formatacao-de-uma-vista-com-slots">8. <span style="color: #365f91"><strong>projeto</strong> [vuejs-06]<strong>: formatação de uma vista com slots</strong></span></h1>
+<p><img src="images/10000000000000EE00000197C8940A10.png" width="83" height="142" style="width:2.2cm;height:3.769cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000EE00000197C8940A10.png" /></p>
+<p><span id="refheadingtoc2479932728496130" name="refheadingtoc2479932728496130" class="odt-bookmark-anchor"></span></p>
 <h2 id="81-o-script-principal-mainjs">8.1. <span style="color: #4f81bd"><strong>O script principal</strong> [main.js]</span></h2>
 <p>O script principal <strong>[main.js]</strong> permanece inalterado.</p>
-<p><a id="refheadingtoc2479952728496130"></a></p>
+<p><span id="refheadingtoc2479952728496130" name="refheadingtoc2479952728496130" class="odt-bookmark-anchor"></span></p>
 <h2 id="82-o-componente-principal-app">8.2. <span style="color: #4f81bd"><strong>O componente principal</strong> [App]</span></h2>
-<p>O código para o componente <strong>[App]</strong> é o seguinte:</p>
+<p>O código do componente <strong>[App]</strong> é o seguinte:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">div</span><span style="color:#000000"> </span><span style="color:#ff0000">class</span><span style="color:#0000ff">=&quot;container&quot;&gt;</span></span></span>
@@ -986,13 +988,13 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-card</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">import</span><span style="color:#000000"> Content </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./components/Content&#x27;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;app&quot;</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// composants utilisés</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// componentes utilizados</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    components: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      Content</span><span style="color:#000000"></span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
@@ -1000,29 +1002,29 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p>O componente <strong>[App]</strong> introduz um novo componente chamado <strong>[Content]</strong> (linhas 7, 14, 19).</p>
-<p><a id="refheadingtoc2479972728496130"></a></p>
+<p>O componente <strong>[App]</strong> introduz um novo componente denominado <strong>[Content]</strong> (linhas 7, 14, 19).</p>
+<p><span id="refheadingtoc2479972728496130" name="refheadingtoc2479972728496130" class="odt-bookmark-anchor"></span></p>
 <h2 id="83-o-componente-layout">8.3. <span style="color: #4f81bd"><strong>O componente</strong> [Layout]</span></h2>
-<p>O componente <strong>[Layout]</strong> é utilizado para definir o layout das vistas da aplicação:</p>
+<p>O componente <strong>[Layout]</strong> serve para definir o layout das vistas da aplicação:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- line --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- linha --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-row</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- three-column zone --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- área com três colunas --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-col</span><span style="color:#000000"> </span><span style="color:#ff0000">cols</span><span style="color:#0000ff">=&quot;3&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">v-if</span><span style="color:#0000ff">=&quot;left&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">slot</span><span style="color:#000000"> </span><span style="color:#ff0000">name</span><span style="color:#0000ff">=&quot;slot-left&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-col</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- nine-column zone --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- área com nove colunas --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-col</span><span style="color:#000000"> </span><span style="color:#ff0000">cols</span><span style="color:#0000ff">=&quot;9&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">v-if</span><span style="color:#0000ff">=&quot;right&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">slot</span><span style="color:#000000"> </span><span style="color:#ff0000">name</span><span style="color:#0000ff">=&quot;slot-right&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-col</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-row</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;patron&quot;</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// paramètres</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// parâmetros</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    props: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      left: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        type: Boolean</span></span>
@@ -1037,41 +1039,42 @@
 
 <p><strong>Comentários</strong></p>
 <ul>
-  <li>O componente<b> [Layout] </b>define uma única linha (linhas 3–12). Esta linha está dividida em duas colunas:
+  <li>o componente <b>[Layout] </b>define uma única linha (linhas 3-12). Esta está dividida em duas colunas:
     <ul>
-      <li>uma coluna composta por 3 colunas Bootstrap (linhas 5–7);
+      <li>uma coluna composta por 3 colunas Bootstrap (linhas 5-7);
       </li>
-      <li>uma coluna composta por 9 colunas Bootstrap (linhas 9–11);
+      <li>uma coluna composta por 9 colunas Bootstrap (linhas 9-11);
       </li>
     </ul>
   </li>
-  <li>linha 5: a presença da coluna esquerda (linhas 5–7) depende do valor do parâmetro<b> [left]</b>, definido na propriedade<b> [props] </b>do componente (linhas 20–22);
+  <li>linha 5: a presença da coluna da esquerda (linhas 5-7) depende do valor do parâmetro <b>[left]</b>, definido na propriedade <b>[props] </b>do componente (linhas 20-22);
   </li>
-  <li>linha 9: a presença da coluna direita (linhas 9–11) depende do valor do parâmetro<b> [right]</b>, definido na propriedade<b> [props] </b>do componente (linhas 23–25);
+  <li>linha 9: a presença da coluna da direita (linhas 9-11) depende do valor do parâmetro <b>[right]</b>, definido na propriedade <b>[props] </b>do componente (linhas 23-25);
   </li>
-  <li>os valores dos parâmetros<b> [left, right] </b>devem ser definidos por um componente pai do componente<b> [Layout]</b>;
+  <li>os valores dos parâmetros <b>[left, right] </b>devem ser definidos por um componente pai do componente <b>[Layout]</b>;
   </li>
-  <li>linha 6: o conteúdo da coluna esquerda não está especificado. Simplesmente atribuímos um nome a esta coluna utilizando a tag &lt;slot&gt;. Aqui, será chamada <b>[slot-left]</b>. Um componente que utilize o componente<b> [Content] </b>deve especificar o que pretende colocar na área chamada <b>[slot-left]</b>;
+  <li>linha 6: não se define o conteúdo da coluna da esquerda. Apenas se atribui um nome a esta coluna com a baliza &lt;slot&gt;. Neste caso, chamar-se-á <b>[slot-left]</b>. Um componente que utilize o componente <b>[Content] </b>deverá indicar o que pretende colocar na área denominada <b>[slot-left]</b>;
   </li>
-  <li>linha 10: a coluna direita será chamada <b>[slot-right]</b>;
+  <li>linha 10: a coluna da direita chamar-se-á <b>[slot-right]</b>;
   </li>
 </ul>
-<p><a id="refheadingtoc2479992728496130"></a></p>
+
+<p><span id="refheadingtoc2479992728496130" name="refheadingtoc2479992728496130" class="odt-bookmark-anchor"></span></p>
 <h2 id="84-o-componente-right">8.4. <span style="color: #4f81bd"><strong>O componente</strong> [Right]</span></h2>
 <p>O componente <strong>[Right]</strong> é o seguinte:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- a message in a warning-type alert --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- uma mensagem num alerta do tipo «warning» --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;warning&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">align</span><span style="color:#0000ff">=&quot;center&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span><span style="font-weight:bold;color:#000000">{{</span><span style="color:#800080">msg</span><span style="font-weight:bold;color:#000000">}}</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- script --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;droite&quot;</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// paramètres</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// parâmetros</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    props: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      msg: String</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
@@ -1080,25 +1083,26 @@
 </code></pre></div>
 
 <ul>
-  <li>linhas 3–5: O componente<b> [Right] </b>exibe uma mensagem num alerta<b> [warning]</b>. Esta mensagem <b>[msg] </b>é definida como um parâmetro do componente na linha 14. O componente pai deve, portanto, fornecer-lhe um valor;
+  <li>linhas 3-5: o componente <b>[Right] </b>apresenta uma mensagem num alerta do tipo <b>[warning]</b>. Esta mensagem <b>[msg] </b>está definida como um parâmetro do componente, linha 14. O componente pai deverá, portanto, atribuir-lhe um valor;
   </li>
 </ul>
-<p><a id="refheadingtoc2480012728496130"></a></p>
+
+<p><span id="refheadingtoc2480012728496130" name="refheadingtoc2480012728496130" class="odt-bookmark-anchor"></span></p>
 <h2 id="85-o-componente-left">8.5. <span style="color: #4f81bd"><strong>O componente</strong> [Left]</span></h2>
 <p>O componente <strong>[Left]</strong> é o seguinte:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- a message in a primary alert --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- uma mensagem num alerta do tipo «primary» --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;primary&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">align</span><span style="color:#0000ff">=&quot;center&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span><span style="font-weight:bold;color:#000000">{{</span><span style="color:#800080">msg</span><span style="font-weight:bold;color:#000000">}}</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- script --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;gauche&quot;</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// paramètres</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// parâmetros</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    props: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      msg: String</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
@@ -1107,35 +1111,36 @@
 </code></pre></div>
 
 <ul>
-  <li>linhas 3–5: O componente<b> [Left] </b>exibe uma mensagem num alerta<b> [primary]</b>. Esta mensagem <b>[msg] </b>é definida como um parâmetro do componente na linha 14. O componente pai deve, portanto, fornecer-lhe um valor;
+  <li>linhas 3-5: o componente <b>[Left] </b>apresenta uma mensagem num alerta do tipo <b>[primary]</b>. Esta mensagem <b>[msg] </b>está definida como um parâmetro do componente, linha 14. O componente pai deverá, portanto, atribuir-lhe um valor;
   </li>
 </ul>
-<p><a id="refheadingtoc2480032728496130"></a></p>
+
+<p><span id="refheadingtoc2480032728496130" name="refheadingtoc2480032728496130" class="odt-bookmark-anchor"></span></p>
 <h2 id="86-o-componente-content">8.6. <span style="color: #4f81bd"><strong>O componente</strong> [Content]</span></h2>
 <p>Recorde-se que o componente <strong>[Content]</strong> é o componente apresentado pela vista principal <strong>[App.vue]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- colonnes gauche et droite remplies --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- colunas esquerda e direita preenchidas --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Layout</span><span style="color:#000000"> </span><span style="color:#ff0000">:left</span><span style="color:#0000ff">=&quot;true&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">:right</span><span style="color:#0000ff">=&quot;true&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Right</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span><span style="color:#0000ff">=&quot;slot-right&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">msg</span><span style="color:#0000ff">=&quot;slot </span><span style="font-weight:bold;color:#0000ff">[slot-right]</span><span style="color:#0000ff"> présent et rempli&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Left</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span><span style="color:#0000ff">=&quot;slot-left&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">msg</span><span style="color:#0000ff">=&quot;slot </span><span style="font-weight:bold;color:#0000ff">[slot-left]</span><span style="color:#0000ff"> présent et rempli&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">Layout</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- colonnes gauche basente. colonne droite remplie --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- colunas esquerda vazia, coluna direita preenchida --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Layout</span><span style="color:#000000"> </span><span style="color:#ff0000">:left</span><span style="color:#0000ff">=&quot;false&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">:right</span><span style="color:#0000ff">=&quot;true&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Right</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span><span style="color:#0000ff">=&quot;slot-right&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">msg</span><span style="color:#0000ff">=&quot;slot </span><span style="font-weight:bold;color:#0000ff">[slot-right]</span><span style="color:#0000ff"> présent et rempli, slot </span><span style="font-weight:bold;color:#0000ff">[slot-left]</span><span style="color:#0000ff"> absent&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">Layout</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- colonnes gauche remplie, colonne droite absente --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- coluna esquerda preenchida, coluna direita ausente --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Layout</span><span style="color:#000000"> </span><span style="color:#ff0000">:left</span><span style="color:#0000ff">=&quot;true&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">:right</span><span style="color:#0000ff">=&quot;false&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Left</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span><span style="color:#0000ff">=&quot;slot-left&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">msg</span><span style="color:#0000ff">=&quot;slot </span><span style="font-weight:bold;color:#0000ff">[slot-left]</span><span style="color:#0000ff"> présent et rempli, slot </span><span style="font-weight:bold;color:#0000ff">[slot-right]</span><span style="color:#0000ff"> absent&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">Layout</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- colonnes gauche présente mais pas remplie, colonne droite remplie --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- coluna esquerda presente mas não preenchida, coluna direita preenchida --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Layout</span><span style="color:#000000"> </span><span style="color:#ff0000">:left</span><span style="color:#0000ff">=&quot;true&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">:right</span><span style="color:#0000ff">=&quot;true&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Right</span><span style="color:#000000"> </span><span style="color:#ff0000">slot</span><span style="color:#0000ff">=&quot;slot-right&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">msg</span><span style="color:#0000ff">=&quot;slot </span><span style="font-weight:bold;color:#0000ff">[slot-right]</span><span style="color:#0000ff"> présent et rempli, slot </span><span style="font-weight:bold;color:#0000ff">[slot-left]</span><span style="color:#0000ff"> présent mais vide&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">Layout</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- script --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">import</span><span style="color:#000000"> Layout </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;./Layout&quot;</span><span style="color:#000000">;</span></span></span>
@@ -1143,7 +1148,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">import</span><span style="color:#000000"> Right </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;./Right&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;contenu&quot;</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// composants</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// componentes</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    components: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      Layout,</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      Left,</span></span>
@@ -1153,29 +1158,29 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p><strong>Representação visual</strong></p>
-<p><img src="images/10000000000008C7000004ED4A6C9A12.png" width="562" height="315" style="width:14.863cm;height:8.341cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000008C7000004ED4A6C9A12.png" /></p>
+<p><strong>Apresentação visual</strong></p>
+<p><img src="images/10000000000008C7000004ED4A6C9A12.png" width="562" height="315" style="width:14.863cm;height:8.34cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000008C7000004ED4A6C9A12.png" /></p>
 <p><strong>Comentários</strong></p>
 <ul>
-  <li>O componente<b> [Layout] </b>é utilizado 4 vezes (linhas 4–7, 9–11, 13–15, 17–19). Uma vez que o componente<b> [Layout] </b>define 1 linha, o <b>[template] </b>acima define quatro linhas. Além disso, a linha <b>[Layout] </b>define duas colunas:
+  <li>o componente <b>[Layout] </b>é utilizado 4 vezes (linhas 4-7, 9-11, 13-15, 17-19). Se nos lembrarmos que o componente <b>[Layout] </b>define uma linha, o <b>[template] </b>acima define quatro linhas. Recordemos também que a linha do <b>[Layout] </b>define duas colunas:
     <ul>
-      <li>uma coluna chamada <b>[slot-left] </b>que ocupa as 3 colunas da esquerda do Bootstrap;
+      <li>uma coluna denominada <b>[slot-left] </b>que ocupa as três colunas Bootstrap da esquerda;
       </li>
-      <li>uma coluna chamada <b>[slot-right] </b>que ocupa as 9 colunas da direita do Bootstrap;
+      <li>uma coluna denominada <b>[slot-Right] </b>que ocupa as 9 colunas Bootstrap da direita;
       </li>
     </ul>
   </li>
-  <li>Linhas 4–7: define uma <b>[1] </b>linha onde o componente<b> [Left] </b>ocupa a coluna<b> [slot-left] </b>e o componente<b> [Right] </b>ocupa a coluna<b> [slot-right]</b>;
+  <li>linhas 4-7: define uma linha <b>[1] </b>em que o componente <b>[Left] </b>ocupa a coluna <b>[slot-left] </b>e o componente <b>[Right] ocupa </b>a coluna <b>[slot-right]</b>;
   </li>
-  <li>linhas 9–11: define uma linha <b>[2] </b>onde a coluna<b> [slot-left] </b>não é exibida e o componente<b> [Right] </b>ocupa a coluna<b> [slot-right]</b>;
+  <li>linhas 9-11: define uma linha <b>[2], </b>em que a coluna <b>[slot-left] </b>não é apresentada e o componente <b>[Right] </b>ocupa a coluna <b>[slot-right]</b>;
   </li>
-  <li>linhas 13–15: define uma linha <b>[3] </b>onde a coluna<b> [slot-right] </b>não é exibida e o componente<b> [Left] </b>ocupa a coluna<b> [slot-left]</b>;
+  <li>linhas 13-15: define uma linha <b>[3] </b>em que a coluna <b>[slot-right] </b>não é apresentada e o componente <b>[Left] </b>ocupa a coluna <b>[slot-left]</b>;
   </li>
-  <li>linhas 17–19: define uma linha <b>[4] </b>onde a coluna<b> [slot-left] </b>é exibida <b>[:left=’true’] </b>mas não preenchida, e o componente<b> [Right] </b>ocupa a coluna<b> [slot-right]</b>;
+  <li>linhas 17-19: define uma linha <b>[4] </b>em que a coluna <b>[slot-left] </b>é apresentada como <b>[:left=’true’], </b>mas não está preenchida, e o componente <b>[Right] </b>ocupa a coluna <b>[slot-right]</b>;
   </li>
 </ul>
 
-<p>Em última análise, o componente <strong>[Layout]</strong> serviu de layout para o componente <strong>[Content]</strong>.</p>
+<p>No final, o componente <strong>[Layout]</strong> serviu de layout para o componente <strong>[Content]</strong>.</p>
 
 
 

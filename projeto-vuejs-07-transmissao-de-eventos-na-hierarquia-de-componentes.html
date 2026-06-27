@@ -12,10 +12,10 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/pt-vuejs-oct-2019/projeto-vuejs-07-propagacao-de-eventos-na-hierarquia-de-componentes.html">
+        <link rel="canonical" href="https://stahe.github.io/pt-vuejs-oct-2019/projeto-vuejs-07-transmissao-de-eventos-na-hierarquia-de-componentes.html">
       
       
-        <link rel="prev" href="projeto-vuejs-06-definindo-o-layout-de-uma-vista-com-slots.html">
+        <link rel="prev" href="projeto-vuejs-06-formatacao-de-uma-vista-com-slots.html">
       
       
         <link rel="next" href="projeto-vuejs-08-eventos-independentes-da-hierarquia-de-componentes-ciclo-de-vida-dos-componentes.html">
@@ -29,7 +29,7 @@
     
     
       
-        <title>9. projeto [vuejs-07]: propagação de eventos na hierarquia de componentes - Uma introdução ao framework Vue.js através de exemplos</title>
+        <title>9. Projeto [vuejs-07]: transmissão de eventos na hierarquia de componentes - Uma introdução ao framework Vue.js através de exemplos</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#9-projeto-vuejs-07-propagacao-de-eventos-na-hierarquia-de-componentes" class="md-skip">
+        <a href="#9-projeto-vuejs-07-transmissao-de-eventos-na-hierarquia-de-componentes" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              9. projeto [vuejs-07]: propagação de eventos na hierarquia de componentes
+              9. Projeto [vuejs-07]: transmissão de eventos na hierarquia de componentes
             
           </span>
         </div>
@@ -330,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="configurar-um-ambiente-de-desenvolvimento.html" class="md-nav__link">
+      <a href="criacao-de-um-ambiente-de-trabalho.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. Configurar um ambiente de desenvolvimento
+    2. Criação de um ambiente de trabalho
   
 
     
@@ -357,14 +359,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-01-o-basico.html" class="md-nav__link">
+      <a href="projeto-vuejs-01-os-fundamentos.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Projeto [vuejs-01]: O Básico
+    3. projeto [vuejs-01]: os fundamentos
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-02-utilizacao-da-estrutura-css-bootstrap.html" class="md-nav__link">
+      <a href="projeto-vuejs-02-utilizacao-do-framework-bootstrap-css.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Projeto [vuejs-02]: Utilização da estrutura CSS Bootstrap
+    4. Projeto [vuejs-02]: utilização do framework Bootstrap CSS
   
 
     
@@ -411,14 +413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-03-tratamento-de-eventos.html" class="md-nav__link">
+      <a href="projeto-vuejs-03-gestao-de-eventos.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. Projeto [vuejs-03]: Tratamento de Eventos
+    5. Projeto [vuejs-03]: gestão de eventos
   
 
     
@@ -438,14 +440,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-04-diretivas-v-model-v-bind-propriedades-computadas-formulario-de-entrada.html" class="md-nav__link">
+      <a href="projeto-vuejs-04-diretrizes-v-model-v-bind-atributos-calculados-formulario-de-introducao-de-dados.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. projeto [vuejs-04]: diretivas [v-model, v-bind], propriedades computadas, formulário de entrada
+    6. projeto [vuejs-04]: diretrizes [v-model, v-bind], atributos calculados, formulário de introdução de dados
   
 
     
@@ -472,7 +474,7 @@
   <span class="md-ellipsis">
     
   
-    7. Projeto [vuejs-05]: diretiva [v-for]
+    7. projeto [vuejs-05]: diretiva [v-for]
   
 
     
@@ -492,14 +494,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-06-definindo-o-layout-de-uma-vista-com-slots.html" class="md-nav__link">
+      <a href="projeto-vuejs-06-formatacao-de-uma-vista-com-slots.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    8. projeto [vuejs-06]: definindo o layout de uma vista com slots
+    8. projeto [vuejs-06]: formatação de uma vista com slots
   
 
     
@@ -535,7 +537,7 @@
   <span class="md-ellipsis">
     
   
-    9. projeto [vuejs-07]: propagação de eventos na hierarquia de componentes
+    9. Projeto [vuejs-07]: transmissão de eventos na hierarquia de componentes
   
 
     
@@ -546,14 +548,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="projeto-vuejs-07-propagacao-de-eventos-na-hierarquia-de-componentes.html" class="md-nav__link md-nav__link--active">
+      <a href="projeto-vuejs-07-transmissao-de-eventos-na-hierarquia-de-componentes.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. projeto [vuejs-07]: propagação de eventos na hierarquia de componentes
+    9. Projeto [vuejs-07]: transmissão de eventos na hierarquia de componentes
   
 
     
@@ -623,10 +625,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#95-executar-o-projeto" class="md-nav__link">
+  <a href="#95-execucao-do-projeto" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9.5. Executar o projeto
+        9.5. Execução do projeto
       
     </span>
   </a>
@@ -655,7 +657,7 @@
   <span class="md-ellipsis">
     
   
-    10. Projeto [vuejs-08]: Eventos independentes da hierarquia de componentes, ciclo de vida dos componentes
+    10. projeto [vuejs-08]: eventos independentes da hierarquia de componentes, ciclo de vida dos componentes
   
 
     
@@ -682,7 +684,7 @@
   <span class="md-ellipsis">
     
   
-    11. Projeto [vuejs-09]: Utilização de um plugin [eventBus]
+    11. projeto [vuejs-09]: utilização de um plugin [eventBus]
   
 
     
@@ -702,14 +704,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-10-plugin-dao-pedidos-http-assincronos.html" class="md-nav__link">
+      <a href="projeto-vuejs-10-plugin-dao-pedidos-assincronos-http.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. Projeto [vuejs-10]: plugin [dao], pedidos HTTP assíncronos
+    12. Projeto [vuejs-10]: plugin [dao], pedidos assíncronos HTTP
   
 
     
@@ -736,7 +738,7 @@
   <span class="md-ellipsis">
     
   
-    13. Projeto [vuejs-11]: roteamento e navegação
+    13. projeto [vuejs-11]: roteamento e navegação
   
 
     
@@ -756,14 +758,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-12-gestao-de-tabelas-html.html" class="md-nav__link">
+      <a href="projeto-vuejs-12-gestao-das-tabelas-html.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Projeto [vuejs-12]: Gestão de tabelas HTML
+    14. Projeto [vuejs-12]: gestão das tabelas HTML
   
 
     
@@ -783,14 +785,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-13-atualizacao-de-um-componente-utilizando-uma-sessao.html" class="md-nav__link">
+      <a href="projeto-vuejs-13-atualizacao-de-um-componente-utilizacao-de-uma-sessao.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. Projeto [vuejs-13]: Atualização de um componente, utilizando uma sessão
+    15. projeto [vuejs-13]: atualização de um componente, utilização de uma sessão
   
 
     
@@ -817,7 +819,7 @@
   <span class="md-ellipsis">
     
   
-    16. Projeto [vuejs-14]: Tornar a sessão reativa
+    16. Projeto [vuejs-14]: tornar a sessão reativa
   
 
     
@@ -844,7 +846,7 @@
   <span class="md-ellipsis">
     
   
-    17. Projeto [vuejs-15]: Utilização do plugin [Vuex]
+    17. Projeto [vuejs-15]: utilização do plugin [Vuex]
   
 
     
@@ -918,14 +920,14 @@
   
   
     <li class="md-nav__item">
-      <a href="implementacao-da-aplicacao-clienteservidor-num-servico-de-alojamento.html" class="md-nav__link">
+      <a href="implantacao-da-aplicacao-clienteservidor-num-servico-de-alojamento.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    20. Implementação da aplicação cliente/servidor num serviço de alojamento
+    20. Implantação da aplicação cliente/servidor num serviço de alojamento
   
 
     
@@ -955,14 +957,14 @@
 
 
 
-<p><a id="refheadingtoc2480052728496130"></a></p>
-<h1 id="9-projeto-vuejs-07-propagacao-de-eventos-na-hierarquia-de-componentes">9. <span style="color: #365f91"><strong>projeto</strong> [vuejs-07]<strong>: propagação de eventos na hierarquia de componentes</strong></span></h1>
-<p>A estrutura do diretório do projeto é a seguinte:</p>
-<p><img src="images/10000000000001510000015761274704.png" width="118" height="120" style="width:3.12cm;height:3.177cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001510000015761274704.png" /></p>
-<p><a id="refheadingtoc2480072728496130"></a></p>
+<p><span id="refheadingtoc2480052728496130" name="refheadingtoc2480052728496130" class="odt-bookmark-anchor"></span></p>
+<h1 id="9-projeto-vuejs-07-transmissao-de-eventos-na-hierarquia-de-componentes">9. <span style="color: #365f91"><strong>Projeto</strong> [vuejs-07]<strong>: transmissão de eventos na hierarquia de componentes</strong></span></h1>
+<p>A estrutura do projeto é a seguinte:</p>
+<p><img src="images/10000000000001510000015761274704.png" width="118" height="120" style="width:3.12cm;height:3.18cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001510000015761274704.png" /></p>
+<p><span id="refheadingtoc2480072728496130" name="refheadingtoc2480072728496130" class="odt-bookmark-anchor"></span></p>
 <h2 id="91-o-script-principal-mainjs">9.1. <span style="color: #4f81bd"><strong>O script principal</strong> [main.js]</span></h2>
 <p>O script principal <strong>[main.js]</strong> permanece inalterado.</p>
-<p><a id="refheadingtoc2480092728496130"></a></p>
+<p><span id="refheadingtoc2480092728496130" name="refheadingtoc2480092728496130" class="odt-bookmark-anchor"></span></p>
 <h2 id="92-o-componente-principal-app">9.2. <span style="color: #4f81bd"><strong>O componente principal</strong> [App]</span></h2>
 <p>O código do componente <strong>[App]</strong> é o seguinte:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
@@ -976,7 +978,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-card</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">import</span><span style="color:#000000"> Component1 </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./components/Component1&#x27;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
@@ -989,9 +991,9 @@
 </code></pre></div>
 
 <p>O componente <strong>[App]</strong> utiliza um novo componente <strong>[Component1]</strong> (linhas 7, 13, 17).</p>
-<p><a id="refheadingtoc2480112728496130"></a></p>
+<p><span id="refheadingtoc2480112728496130" name="refheadingtoc2480112728496130" class="odt-bookmark-anchor"></span></p>
 <h2 id="93-o-componente-component11">9.3. <span style="color: #4f81bd"><strong>O componente</strong> [Component11]</span></h2>
-<p>O código para o componente <strong>[Component11]</strong> é o seguinte:</p>
+<p>O código do componente <strong>[Component11]</strong> é o seguinte:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-button</span><span style="color:#000000"> </span><span style="color:#ff0000">@click</span><span style="color:#0000ff">=&quot;createEvent&quot;&gt;</span><span style="color:#000000">Créer un événement</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-button</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -1000,11 +1002,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;component11&quot;</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// component methods</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// métodos do componente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    methods: {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// event management [click] on button</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// gestão do evento [click] no botão</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      createEvent() {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// we send an event coupled to data</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// é emitido um evento associado a um dado</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">this</span><span style="color:#000000">.$emit(</span><span style="color:#a31515">&quot;someEvent&quot;</span><span style="color:#000000">, { x: 2, y: 4 })</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
@@ -1014,30 +1016,31 @@
 
 <p><strong>Comentários</strong></p>
 <ul>
-  <li>linhas 1–3: o componente<b> [Component11] </b>contém apenas um botão que pode ser clicado. Quando clicado, o método<b> [createEvent] </b>nas linhas 11–14 é executado;
+  <li>linhas 1-3: o componente <b>[Component11] </b>contém apenas um botão no qual se pode clicar. Ao clicar nele, é executado o método <b>[createEvent] </b>das linhas 11-14;
   </li>
-  <li>linha 13: cada instância<b> [View] </b>possui um método<b> [$emit] </b>que permite que um evento seja emitido:
+  <li>linha 13: cada instância <b>[Vue] </b>dispõe de um método <b>[$emit] </b>que permite emitir um evento:
     <ul>
       <li>o primeiro parâmetro é o nome do evento emitido;
       </li>
-      <li>o segundo parâmetro são os dados a associar a este evento;
+      <li>o segundo parâmetro é o dado que se pretende associar a esse evento;
       </li>
-      <li>o evento emitido percorre a hierarquia de componentes que contêm o componente<b> [Component11]</b>. Ele percorre a hierarquia até encontrar um componente capaz de o processar. Este processo começa com o componente pai de <b>[Component11]</b>;
+      <li>o evento emitido sobe na hierarquia dos componentes que estão acima do componente <b>[Component11]</b>. Sobe na hierarquia até encontrar um componente capaz de o processar. Esta subida começa pelo componente pai de <b>[Component11]</b>;
       </li>
     </ul>
   </li>
 </ul>
-<p><a id="refheadingtoc2480132728496130"></a></p>
+
+<p><span id="refheadingtoc2480132728496130" name="refheadingtoc2480132728496130" class="odt-bookmark-anchor"></span></p>
 <h2 id="94-o-componente-component1">9.4. <span style="color: #4f81bd"><strong>O componente</strong> [Component1]</span></h2>
-<p>O código para o componente <strong>[Component1]</strong> é o seguinte:</p>
+<p>O código do componente <strong>[Component1]</strong> é o seguinte:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-row</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- le composant qui lance l&#x27;événement --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- o componente que lança o evento --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-col</span><span style="color:#000000"> </span><span style="color:#ff0000">cols</span><span style="color:#0000ff">=&quot;2&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">Component11</span><span style="color:#000000"> </span><span style="color:#ff0000">@someEvent</span><span style="color:#0000ff">=&quot;doSomething&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-col</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- message affiché par la méthode de gestion de l&#x27;évt--&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- mensagem exibida pelo método de gestão do evento--&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-col</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">               </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;warning&quot;</span></span></span>
@@ -1045,28 +1048,28 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-col</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-row</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">import</span><span style="color:#000000"> Component11 </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;./Component11&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;component1&quot;</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// composants</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// componentes</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    components: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      Component11</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// état du composant</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// estado do componente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    data() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        data: </span><span style="color:#a31515">&quot;&quot;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        showMsg: </span><span style="color:#0000ff">false</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      };</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// méthodes de gestion des évts</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// métodos de gestão de eventos</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    methods: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      doSomething(data) {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// data est l&#x27;objet qui a été associé à l&#x27;évt [someEvent]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// data é o objeto que foi associado ao evento [someEvent]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">this</span><span style="color:#000000">.data = data;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// affiche l&#x27;alerte</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// exibe o alerta</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">this</span><span style="color:#000000">.showMsg = </span><span style="color:#0000ff">true</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
@@ -1074,23 +1077,24 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p><strong>Representação visual</strong></p>
-<p><img src="images/10000000000008BD000001F6420B747E.png" width="559" height="126" style="width:14.803cm;height:3.321cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000008BD000001F6420B747E.png" /></p>
-<p><img src="images/10000000000007AA000001F7AAB0105E.png" width="491" height="126" style="width:12.98cm;height:3.328cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007AA000001F7AAB0105E.png" /></p>
+<p><strong>Apresentação visual</strong></p>
+<p><img src="images/10000000000008BD000001F6420B747E.png" width="559" height="125" style="width:14.803cm;height:3.32cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000008BD000001F6420B747E.png" /></p>
+<p><img src="images/10000000000007AA000001F7AAB0105E.png" width="491" height="126" style="width:12.98cm;height:3.33cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007AA000001F7AAB0105E.png" /></p>
 <p><strong>Comentários</strong></p>
 <ul>
-  <li>linha 5: <b>[Component1] </b>é o pai de <b>[Component11] </b>e, por isso, pode «ouvir» (é esse o termo) os eventos emitidos por este componente. Sabemos que [Component11] pode emitir o evento<b> [someEvent]</b>. O atributo <b>[@someEvent=&quot;doSomething&quot;] </b>indica que, se o evento<b> [someEvent] </b>emitido por <b>[Component11] </b>ocorrer, então o método<b> [doSomething] </b>na linha 33 deve ser executado;
+  <li>linha 5: <b>[Component1] </b>é o componente pai de <b>[Component11] </b>e, por isso, pode «ouvir» (é este o termo) os eventos emitidos por esse componente. Sabe-se que este último pode emitir o evento <b>[someEvent]</b>. O atributo <b>[@someEvent=&quot;doSomething&quot;] </b>indica que, se o evento <b>[someEvent] </b>emitido por <b>[Component11] </b>ocorrer, então o método <b>[doSomething] </b>da linha 33 deve ser executado;
   </li>
-  <li>linhas 9–11: uma mensagem exibida pelo método<b> [doSomething]</b>. A sua exibição é controlada pelo booleano <b>[showMsg] </b>na linha 28. O alerta exibe o atributo<b> [data] </b>da linha 27;
+  <li>linhas 9-11: uma mensagem exibida pelo método <b>[doSomething]</b>. A sua exibição é controlada pela variável booleana <b>[showMsg] </b>da linha 28. O alerta exibe o atributo <b>[data] </b>da linha 27;
   </li>
-  <li>Linha 33: O método<b> [doSomething]</b>, executado quando o evento<b> [someEvent] </b>ocorre (linha 5), recebe o <b>[data] </b>associado a este evento como parâmetro. Este parâmetro é atribuído ao atributo<b> [data] </b>na linha 27, que é exibido pela linha 11;
+  <li>linha 33: o método <b>[doSomething]</b>, executado quando ocorre o evento <b>[someEvent] </b>(linha 5), recebe como parâmetro o dado <b>[data] </b>associado a esse evento. Este parâmetro é atribuído ao atributo <b>[data] </b>da linha 27, que é apresentado pela linha 11;
   </li>
-  <li>linha 37: definimos o atributo<b> [showMsg] </b>como <b>[true] </b>para exibir o alerta das linhas 9–11;
+  <li>linha 37: define-se o atributo <b>[showMsg] </b>como <b>[true] </b>para exibir o alerta das linhas 9-11;
   </li>
 </ul>
-<p><a id="refheadingtoc2480152728496130"></a></p>
-<h2 id="95-executar-o-projeto">9.5. <span style="color: #4f81bd">Executar o projeto</span></h2>
-<p><img src="images/100000000000070F00000202C3A97AFF.png" width="542" height="154" style="width:14.34cm;height:4.08cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000070F00000202C3A97AFF.png" /></p>
+
+<p><span id="refheadingtoc2480152728496130" name="refheadingtoc2480152728496130" class="odt-bookmark-anchor"></span></p>
+<h2 id="95-execucao-do-projeto">9.5. <span style="color: #4f81bd">Execução do projeto</span></h2>
+<p><img src="images/100000000000070F00000202C3A97AFF.png" width="542" height="154" style="width:14.34cm;height:4.082cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000070F00000202C3A97AFF.png" /></p>
 
 
 

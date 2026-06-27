@@ -12,13 +12,13 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/pt-vuejs-oct-2019/projeto-vuejs-12-gestao-de-tabelas-html.html">
+        <link rel="canonical" href="https://stahe.github.io/pt-vuejs-oct-2019/projeto-vuejs-12-gestao-das-tabelas-html.html">
       
       
         <link rel="prev" href="projeto-vuejs-11-roteamento-e-navegacao.html">
       
       
-        <link rel="next" href="projeto-vuejs-13-atualizacao-de-um-componente-utilizando-uma-sessao.html">
+        <link rel="next" href="projeto-vuejs-13-atualizacao-de-um-componente-utilizacao-de-uma-sessao.html">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>14. Projeto [vuejs-12]: Gestão de tabelas HTML - Uma introdução ao framework Vue.js através de exemplos</title>
+        <title>14. Projeto [vuejs-12]: gestão das tabelas HTML - Uma introdução ao framework Vue.js através de exemplos</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#14-projeto-vuejs-12-gestao-de-tabelas-html" class="md-skip">
+        <a href="#14-projeto-vuejs-12-gestao-das-tabelas-html" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              14. Projeto [vuejs-12]: Gestão de tabelas HTML
+              14. Projeto [vuejs-12]: gestão das tabelas HTML
             
           </span>
         </div>
@@ -330,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="configurar-um-ambiente-de-desenvolvimento.html" class="md-nav__link">
+      <a href="criacao-de-um-ambiente-de-trabalho.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. Configurar um ambiente de desenvolvimento
+    2. Criação de um ambiente de trabalho
   
 
     
@@ -357,14 +359,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-01-o-basico.html" class="md-nav__link">
+      <a href="projeto-vuejs-01-os-fundamentos.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Projeto [vuejs-01]: O Básico
+    3. projeto [vuejs-01]: os fundamentos
   
 
     
@@ -384,14 +386,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-02-utilizacao-da-estrutura-css-bootstrap.html" class="md-nav__link">
+      <a href="projeto-vuejs-02-utilizacao-do-framework-bootstrap-css.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Projeto [vuejs-02]: Utilização da estrutura CSS Bootstrap
+    4. Projeto [vuejs-02]: utilização do framework Bootstrap CSS
   
 
     
@@ -411,14 +413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-03-tratamento-de-eventos.html" class="md-nav__link">
+      <a href="projeto-vuejs-03-gestao-de-eventos.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. Projeto [vuejs-03]: Tratamento de Eventos
+    5. Projeto [vuejs-03]: gestão de eventos
   
 
     
@@ -438,14 +440,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-04-diretivas-v-model-v-bind-propriedades-computadas-formulario-de-entrada.html" class="md-nav__link">
+      <a href="projeto-vuejs-04-diretrizes-v-model-v-bind-atributos-calculados-formulario-de-introducao-de-dados.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. projeto [vuejs-04]: diretivas [v-model, v-bind], propriedades computadas, formulário de entrada
+    6. projeto [vuejs-04]: diretrizes [v-model, v-bind], atributos calculados, formulário de introdução de dados
   
 
     
@@ -472,7 +474,7 @@
   <span class="md-ellipsis">
     
   
-    7. Projeto [vuejs-05]: diretiva [v-for]
+    7. projeto [vuejs-05]: diretiva [v-for]
   
 
     
@@ -492,14 +494,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-06-definindo-o-layout-de-uma-vista-com-slots.html" class="md-nav__link">
+      <a href="projeto-vuejs-06-formatacao-de-uma-vista-com-slots.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    8. projeto [vuejs-06]: definindo o layout de uma vista com slots
+    8. projeto [vuejs-06]: formatação de uma vista com slots
   
 
     
@@ -519,14 +521,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-07-propagacao-de-eventos-na-hierarquia-de-componentes.html" class="md-nav__link">
+      <a href="projeto-vuejs-07-transmissao-de-eventos-na-hierarquia-de-componentes.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. projeto [vuejs-07]: propagação de eventos na hierarquia de componentes
+    9. Projeto [vuejs-07]: transmissão de eventos na hierarquia de componentes
   
 
     
@@ -553,7 +555,7 @@
   <span class="md-ellipsis">
     
   
-    10. Projeto [vuejs-08]: Eventos independentes da hierarquia de componentes, ciclo de vida dos componentes
+    10. projeto [vuejs-08]: eventos independentes da hierarquia de componentes, ciclo de vida dos componentes
   
 
     
@@ -580,7 +582,7 @@
   <span class="md-ellipsis">
     
   
-    11. Projeto [vuejs-09]: Utilização de um plugin [eventBus]
+    11. projeto [vuejs-09]: utilização de um plugin [eventBus]
   
 
     
@@ -600,14 +602,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-10-plugin-dao-pedidos-http-assincronos.html" class="md-nav__link">
+      <a href="projeto-vuejs-10-plugin-dao-pedidos-assincronos-http.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. Projeto [vuejs-10]: plugin [dao], pedidos HTTP assíncronos
+    12. Projeto [vuejs-10]: plugin [dao], pedidos assíncronos HTTP
   
 
     
@@ -634,7 +636,7 @@
   <span class="md-ellipsis">
     
   
-    13. Projeto [vuejs-11]: roteamento e navegação
+    13. projeto [vuejs-11]: roteamento e navegação
   
 
     
@@ -670,7 +672,7 @@
   <span class="md-ellipsis">
     
   
-    14. Projeto [vuejs-12]: Gestão de tabelas HTML
+    14. Projeto [vuejs-12]: gestão das tabelas HTML
   
 
     
@@ -681,14 +683,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="projeto-vuejs-12-gestao-de-tabelas-html.html" class="md-nav__link md-nav__link--active">
+      <a href="projeto-vuejs-12-gestao-das-tabelas-html.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Projeto [vuejs-12]: Gestão de tabelas HTML
+    14. Projeto [vuejs-12]: gestão das tabelas HTML
   
 
     
@@ -747,10 +749,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#144-executar-o-projeto" class="md-nav__link">
+  <a href="#144-execucao-do-projeto" class="md-nav__link">
     <span class="md-ellipsis">
       
-        14.4. Executar o projeto
+        14.4. Execução do projeto
       
     </span>
   </a>
@@ -772,14 +774,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-13-atualizacao-de-um-componente-utilizando-uma-sessao.html" class="md-nav__link">
+      <a href="projeto-vuejs-13-atualizacao-de-um-componente-utilizacao-de-uma-sessao.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. Projeto [vuejs-13]: Atualização de um componente, utilizando uma sessão
+    15. projeto [vuejs-13]: atualização de um componente, utilização de uma sessão
   
 
     
@@ -806,7 +808,7 @@
   <span class="md-ellipsis">
     
   
-    16. Projeto [vuejs-14]: Tornar a sessão reativa
+    16. Projeto [vuejs-14]: tornar a sessão reativa
   
 
     
@@ -833,7 +835,7 @@
   <span class="md-ellipsis">
     
   
-    17. Projeto [vuejs-15]: Utilização do plugin [Vuex]
+    17. Projeto [vuejs-15]: utilização do plugin [Vuex]
   
 
     
@@ -907,14 +909,14 @@
   
   
     <li class="md-nav__item">
-      <a href="implementacao-da-aplicacao-clienteservidor-num-servico-de-alojamento.html" class="md-nav__link">
+      <a href="implantacao-da-aplicacao-clienteservidor-num-servico-de-alojamento.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    20. Implementação da aplicação cliente/servidor num serviço de alojamento
+    20. Implantação da aplicação cliente/servidor num serviço de alojamento
   
 
     
@@ -944,66 +946,66 @@
 
 
 
-<p><a id="refheadingtoc2480832728496130"></a></p>
-<h1 id="14-projeto-vuejs-12-gestao-de-tabelas-html">14. <span style="color: #365f91"><strong>Projeto</strong> [vuejs-12]<strong>: Gestão de tabelas HTML</strong></span></h1>
-<p>A estrutura de diretórios do projeto <strong>[vuejs-12]</strong> é a seguinte:</p>
-<p><img src="images/1000000000000155000000DF71B4D4AB.png" width="120" height="78" style="width:3.163cm;height:2.067cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000155000000DF71B4D4AB.png" /></p>
-<p><a id="refheadingtoc2480852728496130"></a></p>
+<p><span id="refheadingtoc2480832728496130" name="refheadingtoc2480832728496130" class="odt-bookmark-anchor"></span></p>
+<h1 id="14-projeto-vuejs-12-gestao-das-tabelas-html">14. <span style="color: #365f91"><strong>Projeto</strong> [vuejs-12]<strong>: gestão das tabelas HTML</strong></span></h1>
+<p>A estrutura do projeto <strong>[vuejs-12]</strong> é a seguinte:</p>
+<p><img src="images/1000000000000155000000DF71B4D4AB.png" width="120" height="78" style="width:3.163cm;height:2.073cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000155000000DF71B4D4AB.png" /></p>
+<p><span id="refheadingtoc2480852728496130" name="refheadingtoc2480852728496130" class="odt-bookmark-anchor"></span></p>
 <h2 id="141-o-script-principal-mainjs">14.1. <span style="color: #4f81bd"><strong>O script principal</strong> [main.js]</span></h2>
-<p>O script principal volta a ser o que era nos projetos iniciais:</p>
+<p>O script principal volta a ser o que era nos primeiros projetos:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// importações</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Vue </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;vue&#x27;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> App </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./App.vue&#x27;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// plugins</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> BootstrapVue </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;bootstrap-vue&#x27;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">Vue.use(BootstrapVue);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// bootstrap</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// Bootstrap</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;bootstrap/dist/css/bootstrap.css&#x27;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;bootstrap-vue/dist/bootstrap-vue.css&#x27;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// configuration</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// configuração</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">Vue.config.productionTip = </span><span style="color:#0000ff">false</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// instanciation projet [App]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// instanciação do projeto [App]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">new</span><span style="color:#000000"> Vue({</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  name: </span><span style="color:#a31515">&quot;app&quot;</span><span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  render: h =&gt; h(App),</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">}).$mount(</span><span style="color:#a31515">&#x27;#app&#x27;</span><span style="color:#000000">)</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}).$mount(&#x27;#app&#x27;)</span></span>
 </code></pre></div>
 
-<p><a id="refheadingtoc2480872728496130"></a></p>
+<p><span id="refheadingtoc2480872728496130" name="refheadingtoc2480872728496130" class="odt-bookmark-anchor"></span></p>
 <h2 id="142-a-vista-principal-app">14.2. <span style="color: #4f81bd"><strong>A vista principal</strong> [App]</span></h2>
-<p>O código para a vista principal <strong>[App]</strong> é o seguinte:</p>
+<p>O código da vista principal <strong>[App]</strong> é o seguinte:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">div</span><span style="color:#000000"> </span><span style="color:#ff0000">class</span><span style="color:#0000ff">=&quot;container&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-card</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- message --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- mensagem --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;success&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">align</span><span style="color:#0000ff">=&quot;center&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span><span style="font-weight:bold;color:#000000">[vuejs-12]</span><span style="color:#000000"> : gestion des tables</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- table component --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- componente Table --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="background-color:#ffff00;color:#800000">Table</span><span style="color:#000000"> </span><span style="color:#ff0000">@supprimerLigne</span><span style="color:#0000ff">=&quot;supprimerLigne&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">:lignes</span><span style="color:#0000ff">=&quot;lignes&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">@rechargerListe</span><span style="color:#0000ff">=&quot;rechargerListe&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-card</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">import</span><span style="color:#000000"> </span><span style="background-color:#ffff00;color:#000000">Table</span><span style="color:#000000"> </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;./components/</span><span style="background-color:#ffff00;color:#a31515">Table</span><span style="color:#a31515">&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// nom</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// nome</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;app&quot;</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// composants utilisés</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// componentes utilizados</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    components: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="background-color:#ffff00;color:#000000">Table</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// état interne</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// estado interno</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    data() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// liste des simulations</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// lista de simulações</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        lignes: [</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          { id: 3, marié: </span><span style="color:#a31515">&quot;oui&quot;</span><span style="color:#000000">, enfants: 2, salaire: 35000, impôt: 1200 },</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          { id: 5, marié: </span><span style="color:#a31515">&quot;non&quot;</span><span style="color:#000000">, enfants: 2, salaire: 35000, impôt: 1900 },</span></span></span>
@@ -1011,21 +1013,21 @@
 <span class="odt-code-line"><span class="odt-code-line-content">        ]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      };</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// méthodes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// métodos</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    methods: {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// suppression d&#x27;une ligne</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// eliminação de uma linha</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      supprimerLigne(index) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// eslint-disable-next-line</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        console.log(</span><span style="color:#a31515">&quot;App supprimerLigne&quot;</span><span style="color:#000000">, index);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// suppression ligne à la position [index]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// remoção da linha na posição [index]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">this</span><span style="color:#000000">.lignes.splice(index, 1);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// rechargement de la table des lignes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// recarregamento da tabela de linhas</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      rechargerListe() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// eslint-disable-next-line</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        console.log(</span><span style="color:#a31515">&quot;App rechargerListe&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// on régénère la liste des lignes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// regenera-se a lista de linhas</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">this</span><span style="color:#000000">.lignes = [</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          { id: 3, marié: </span><span style="color:#a31515">&quot;oui&quot;</span><span style="color:#000000">, enfants: 2, salaire: 35000, impôt: 1200 },</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          { id: 5, marié: </span><span style="color:#a31515">&quot;non&quot;</span><span style="color:#000000">, enfants: 2, salaire: 35000, impôt: 1900 },</span></span></span>
@@ -1039,43 +1041,44 @@
 
 <p><strong>Comentários</strong></p>
 <ul>
-  <li>a vista principal exibe um componente<b> [Table] </b>(linhas 9, 15, 21);
+  <li>a vista principal apresenta um componente <b>[Table] </b>(linhas 9, 15, 21);
   </li>
-  <li>linha 9:  o componente<b> [Table] </b>aceita o parâmetro<b> [:rows]</b>, que representa as linhas a serem exibidas numa tabela HTML. Estas linhas são definidas pelas linhas 27–31 do código;
+  <li>linha 9: o componente <b>[Table] </b>aceita o parâmetro <b>[:lignes], </b>que representa as linhas a apresentar numa tabela HTML. Estas linhas são definidas pelas linhas 27 a 31 do código;
   </li>
-  <li>linha 9: o componente<b> [Table] </b>pode desencadear dois eventos:
+  <li>linha 9: o componente [Table] pode emitir dois eventos:
     <ul>
-      <li><b>[deleteRow]</b>: para eliminar uma linha, especificando o seu índice (linha 38);
+      <li><b>[supprimerLigne]</b>: para eliminar uma linha cujo índice é indicado (linha 38);
       </li>
-      <li><b>[reloadList]</b>: para regenerar a lista nas linhas 27–31. De facto, veremos que o utilizador pode eliminar algumas das linhas apresentadas;
+      <li><b>[rechargerListe]</b>: para regenerar a lista das linhas 27 a 31. Com efeito, veremos que o utilizador pode eliminar algumas das linhas apresentadas;
       </li>
     </ul>
   </li>
-  <li>linhas 38–43: o método responsável por tratar o evento<b> [deleteRow]</b>. Recebe o índice da linha a ser eliminada como parâmetro;
+  <li>linhas 38-43: o método responsável por gerir o evento <b>[supprimerLigne]</b>. Recebe como parâmetro o índice da linha a eliminar;
   </li>
-  <li>linhas 45–54: o método responsável por tratar o evento<b> [reloadList]</b>. Ao modificar o atributo<b> [rows] </b>na linha 27, desencadeamos uma atualização do componente<b> [Table] </b>na linha 9, uma vez que este possui um parâmetro <b>[:rows=&quot;rows&quot;] </b>;
+  <li>linhas 45-54: o método responsável por gerir o evento <b>[rechargerListe]</b>. Ao alterar o atributo <b>[lignes] </b>da linha 27, provoca-se a atualização do componente <b>[Table] </b>da linha 9, uma vez que este possui um parâmetro <b>[:lignes=&quot;lignes&quot;]</b>;
   </li>
 </ul>
-<p><a id="refheadingtoc2480892728496130"></a></p>
+
+<p><span id="refheadingtoc2480892728496130" name="refheadingtoc2480892728496130" class="odt-bookmark-anchor"></span></p>
 <h2 id="143-o-componente-table">14.3. <span style="color: #4f81bd"><strong>O componente</strong> [Table]</span></h2>
 <p>O componente <strong>[Table]</strong> é o seguinte:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- empty list --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- lista vazia --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#000000"> </span><span style="color:#ff0000">v-if</span><span style="color:#0000ff">=&quot;lignes.length==0&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;warning&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Votre liste de simulations est vide</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- reload button--&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- botão de atualização--&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-button</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;primary&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">@click</span><span style="color:#0000ff">=&quot;rechargerListe&quot;&gt;</span><span style="color:#000000">Recharger la liste</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-button</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- non-empty list--&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- lista não vazia--&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#000000"> </span><span style="color:#ff0000">v-if</span><span style="color:#0000ff">=&quot;lignes.length!=0&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;primary&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">v-if</span><span style="color:#0000ff">=&quot;lignes.length==0&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Liste de vos simulations</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- simulation table --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- tabela de simulações --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-table</span><span style="color:#000000"> </span><span style="color:#ff0000">striped</span><span style="color:#000000"> </span><span style="color:#ff0000">hover</span><span style="color:#000000"> </span><span style="color:#ff0000">responsive</span><span style="color:#000000"> </span><span style="color:#ff0000">:items</span><span style="color:#0000ff">=&quot;lignes&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">:fields</span><span style="color:#0000ff">=&quot;fields&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#000000"> </span><span style="color:#ff0000">v-slot:cell(action)</span><span style="color:#0000ff">=&quot;row&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-button</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;link&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">@click</span><span style="color:#0000ff">=&quot;supprimerLigne(row.index)&quot;&gt;</span><span style="color:#000000">Supprimer</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-button</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -1084,16 +1087,16 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// propriétés</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// propriedades</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    props: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      lignes: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        type: Array</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// état interne</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// estado interno</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    data() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        fields: [</span></span>
@@ -1106,20 +1109,20 @@
 <span class="odt-code-line"><span class="odt-code-line-content">        ]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      };</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// méthodes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// métodos</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    methods: {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// suppression d&#x27;une ligne</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// eliminação de uma linha</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      supprimerLigne(index) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// eslint-disable-next-line</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        console.log(</span><span style="color:#a31515">&quot;Table supprimerLigne&quot;</span><span style="color:#000000">, index);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// on passe l&#x27;information au composant parent</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// passar a informação ao componente pai</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">this</span><span style="color:#000000">.$emit(</span><span style="color:#a31515">&quot;supprimerLigne&quot;</span><span style="color:#000000">, index);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      },</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// rechargement de la liste affichée</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// recarregamento da lista apresentada</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      rechargerListe() {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// eslint-disable-next-line</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        console.log(</span><span style="color:#a31515">&quot;Table rechargerListe&quot;</span><span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// on émet un événement vers le composant parent</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// envia-se um evento para o componente pai</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">this</span><span style="color:#000000">.$emit(</span><span style="color:#a31515">&quot;rechargerListe&quot;</span><span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
@@ -1136,36 +1139,36 @@
   </li>
 </ol>
 
-<p>O primeiro estado é exibido se a condição <strong>[lines.length!=0]</strong> for verdadeira (linha 12):</p>
-<p><img src="images/10000000000007CF00000339BCF658A0.png" width="500" height="206" style="width:13.22cm;height:5.456cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007CF00000339BCF658A0.png" /></p>
-<p>O segundo é exibido se a condição <strong>[lines.length==0]</strong> for verdadeira (linha 4).</p>
-<p><img src="images/100000000000065500000249DDE95992.png" width="405" height="146" style="width:10.719cm;height:3.868cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000065500000249DDE95992.png" /></p>
+<p>O primeiro estado é apresentado se a condição <strong>[lignes.length!=0]</strong> for verificada (linha 12):</p>
+<p><img src="images/10000000000007CF00000339BCF658A0.png" width="500" height="206" style="width:13.22cm;height:5.459cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007CF00000339BCF658A0.png" /></p>
+<p>O segundo é apresentado se a condição <strong>[lignes.length==0]</strong> for verificada (linha 4).</p>
+<p><img src="images/100000000000065500000249DDE95992.png" width="405" height="146" style="width:10.719cm;height:3.872cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000065500000249DDE95992.png" /></p>
 <ul>
-  <li><b>[lines] </b>é um parâmetro de entrada do componente (linhas 29–33);
+  <li><b>[lignes] </b>é um parâmetro de entrada do componente (linhas 29-33);
   </li>
-  <li>linhas 4–10: em vez de inserir um bloco de código com uma tag &lt;div&gt;, utilizámos aqui uma tag &lt;template&gt;. A diferença entre as duas é que a tag &lt;template&gt; não é incluída no código HTML gerado;
+  <li>linhas 4-10: em vez de introduzir um bloco de código com a baliza &lt;div&gt;, utilizou-se aqui uma baliza &lt;template&gt;. A diferença entre as duas é que a baliza &lt;template&gt; não é inserida no código HTML gerado;
   </li>
-  <li>linha 9: quando a lista apresentada pela tabela HTML está vazia, um botão oferece a possibilidade de a atualizar. Quando este botão é clicado, o método<b> [reloadList] </b>nas linhas 57–62 é executado. Este método simplesmente envia o evento<b> [reloadList] </b>para o componente pai, o que instrui o pai a regenerar a lista apresentada pela tabela HTML;
+  <li>linha 9: quando a lista apresentada pela tabela HTML está vazia, um botão oferece a opção de a regenerar. Ao clicar neste botão, é executado o método <b>[rechargerListe] </b>das linhas 57-62. Este método limita-se a enviar ao componente pai o evento <b>[rechargerListe], </b>que solicita ao pai que regene a lista apresentada pela tabela HTML;
   </li>
-  <li>linhas 12–22: o código exibido quando a lista a ser exibida não está vazia;
+  <li>linhas 12-22: o código exibido quando a lista a apresentar não está vazia;
   </li>
-  <li>linha 17: a tag &lt;b-table&gt; é a tag que gera uma tabela HTML. Os atributos utilizados aqui são os seguintes:
+  <li>linha 17: a baliza &lt;b-table&gt; é a baliza que gera uma tabela HTML. Os atributos utilizados aqui são os seguintes:
     <ul>
-      <li><b>[striped]</b>: a cor de fundo das linhas alterna. Há uma cor para as linhas pares e outra para as ímpares. Isto melhora a visibilidade;
+      <li><b>[striped]</b>: a cor de fundo das linhas alterna. Há uma cor para as linhas pares e outra para as linhas ímpares. Isto melhora a visibilidade;
       </li>
-      <li><b>[hover]</b>: a linha sobre a qual o cursor passa muda de cor;
+      <li><b>[hover]</b>: a linha sobre a qual se passa o cursor muda de cor;
       </li>
       <li><b>[responsive]</b>: o tamanho da tabela adapta-se ao ecrã em que é apresentada;
       </li>
-      <li><b>[:items]</b>: a matriz de itens a apresentar. Aqui, a matriz<b> [rows] </b>é passada como parâmetro ao componente (linhas 30–32);
+      <li><b>[:items]</b>: a matriz dos elementos a apresentar. Aqui, a matriz <b>[lignes] </b>passada como parâmetro ao componente (linhas 30-32);
       </li>
-      <li><b>[:fields]</b>: uma matriz que define o layout da tabela HTML (linhas 37–44);
+      <li><b>[:fields]</b>: uma matriz que define o layout da tabela HTML (linhas 37-44);
         <ul>
-          <li>Cada elemento na matriz<b> [fields] </b>define uma coluna na tabela HTML;
+          <li>cada elemento da tabela <b>[fields] </b>define uma coluna da tabela HTML;
           </li>
-          <li><b>[label]</b>: especifica o cabeçalho da coluna;
+          <li><b>[label]</b>: indica o título da coluna;
           </li>
-          <li><b>[key]</b>: especifica o conteúdo da coluna;
+          <li><b>[key]</b>: indica o conteúdo da coluna;
           </li>
         </ul>
       </li>
@@ -1173,17 +1176,17 @@
   </li>
   <li>linha 38: define a coluna 0 da tabela HTML:
     <ul>
-      <li><b>[#]</b>: é o cabeçalho da coluna;
+      <li><b>[#]</b>: é o título da coluna;
       </li>
-      <li><b>[id]</b>: é o seu conteúdo. É o campo<b> [id] </b>da linha apresentada que irá preencher a coluna 0;
+      <li><b>[id]</b>: é o seu conteúdo. É o campo <b>[id] </b>da linha apresentada que preencherá a coluna 0;
       </li>
     </ul>
   </li>
   <li>linha 39: define a coluna 1 da tabela HTML:
     <ul>
-      <li><b>[Casado]</b>: é o cabeçalho da coluna;
+      <li><b>[Marié]</b>: é o título da coluna;
       </li>
-      <li><b>[married]</b>: é o seu conteúdo. É o campo<b> [married] </b>da linha exibida que irá preencher a coluna 0;
+      <li><b>[marié]</b>: é o seu conteúdo. É o campo <b>[marié] </b>da linha apresentada que preencherá a coluna 0;
       </li>
     </ul>
   </li>
@@ -1191,11 +1194,11 @@
     <ul>
       <li>a coluna não tem título;
       </li>
-      <li>o seu conteúdo é definido por um campo<b> [action]</b>, um campo que não existe nas linhas apresentadas. Esta chave é referenciada na linha 18 do <b>[template]</b>. A chave é, portanto, utilizada aqui exclusivamente para identificar uma coluna;
+      <li>o seu conteúdo é definido por um campo <b>[action]</b>, um campo que não existe nas linhas apresentadas. Esta chave é referenciada na linha 18 do <b>[template]</b>. A chave é, portanto, utilizada aqui apenas para identificar uma coluna;
       </li>
     </ul>
   </li>
-  <li>linhas 18–20: este código é utilizado para definir a última coluna da tabela HTML, aquela com a chave<b> [action]</b>:
+  <li>linhas 18-20: este código serve para definir a última coluna da tabela HTML, a da chave <b>[action]</b>:
   </li>
 </ul>
 
@@ -1203,32 +1206,33 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#000000"> </span><span style="color:#ff0000">v-slot:cell(action)</span><span style="color:#0000ff">=&quot;row&quot;&gt;</span></span></span>
 </code></pre></div>
 
-<p>A sintaxe <strong>[v-slot:cell(action)]</strong> refere-se à coluna com a chave <strong>[action]</strong>. Esta sintaxe permite definir uma coluna quando a sintaxe da matriz <strong>[fields]</strong> não é suficiente para a descrever. Aqui, queremos que a última coluna contenha um link que permita eliminar uma linha da tabela HTML:</p>
-<p><img src="images/10000000000007D20000034311EC8DBA.png" width="500" height="209" style="width:13.242cm;height:5.523cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007D20000034311EC8DBA.png" /></p>
-<p>Na sintaxe <strong>[&lt;template v-slot:cell(action)=&quot;row&quot;&gt;]</strong>, o nome <strong>[row]</strong> refere-se à linha da tabela. Pode utilizar qualquer nome que desejar. Poderíamos ter escrito <strong>[&lt;template v-slot:cell(action)=&quot;row&quot;&gt;]</strong>;</p>
+<p>A sintaxe <strong>[v-slot:cell(action)]</strong> designa a coluna-chave <strong>[action]</strong>. Esta sintaxe permite definir uma coluna quando a sintaxe da tabela <strong>[fields]</strong> não é suficiente para a descrever. Neste caso, pretendemos que a última coluna contenha um link que permita eliminar uma linha da tabela HTML:</p>
+<p><img src="images/10000000000007D20000034311EC8DBA.png" width="500" height="209" style="width:13.242cm;height:5.519cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007D20000034311EC8DBA.png" /></p>
+<p>Na sintaxe <strong>[&lt;template v-slot:cell(action)=&quot;row&quot;&gt;]</strong>, o nome <strong>[row]</strong> designa a linha da tabela. Pode utilizar-se o nome que se desejar. Ter-se-ia podido escrever <strong>[&lt;template v-slot:cell(action)=&quot;ligne&quot;&gt;]</strong>;</p>
 <ul>
-  <li>linha 19: um &lt;b-button&gt; apresentado como um link <b>[variant=&#x27;link&#x27;]</b>. Clicar neste link aciona a execução do método<b> [supprimerLigne(row.index)]</b>. Aqui, <b>[row] </b>é o nome dado à linha na tabela HTML, linha 18 do código;
+  <li>linha 19: um botão &lt;b-button&gt; apresentado como um link <b>[variant=’link’]</b>. Um clique neste link provoca a execução do método <b>[supprimerLigne(row.index)]</b>. Aqui, <b>[row] </b>é o nome atribuído à linha da tabela HTML, linha 18 do código;
   </li>
-  <li>Linhas 50–55: o método<b> [deleteRow]</b>;
+  <li>linhas 50-55: o método <b>[supprimerLigne]</b>;
   </li>
-  <li>linha 54: o evento<b> [deleteRow] </b>é enviado para o componente pai juntamente com o número da linha a ser eliminada;
+  <li>linha 54: é emitido o evento <b>[supprimerLigne] </b>para o componente pai, acompanhado do número da linha a eliminar;
   </li>
-  <li>linhas 57–62: o método<b> [reloadList]</b>;
+  <li>linhas 57-62: o método <b>[rechargerListe]</b>;
   </li>
-  <li>linha 61: o evento<b> [reloadList] </b>é enviado para o componente pai;
+  <li>linha 61: é enviado o evento <b>[rechargerListe] </b>para o componente pai;
   </li>
 </ul>
-<p><a id="refheadingtoc2480912728496130"></a></p>
-<h2 id="144-executar-o-projeto">14.4. <span style="color: #4f81bd">Executar o projeto</span></h2>
-<p><img src="images/10000000000007080000025F4C64C426.png" width="450" height="152" style="width:11.912cm;height:4.016cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007080000025F4C64C426.png" /></p>
+
+<p><span id="refheadingtoc2480912728496130" name="refheadingtoc2480912728496130" class="odt-bookmark-anchor"></span></p>
+<h2 id="144-execucao-do-projeto">14.4. <span style="color: #4f81bd">Execução do projeto</span></h2>
+<p><img src="images/10000000000007080000025F4C64C426.png" width="450" height="152" style="width:11.912cm;height:4.009cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007080000025F4C64C426.png" /></p>
 <p>A primeira vista apresentada é a seguinte:</p>
-<p><img src="images/10000000000007E80000034849481130.png" width="506" height="210" style="width:13.39cm;height:5.556cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007E80000034849481130.png" /></p>
-<p>Após eliminar a linha 1 <strong>[1]</strong>, a vista fica assim:</p>
+<p><img src="images/10000000000007E80000034849481130.png" width="506" height="210" style="width:13.39cm;height:5.562cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007E80000034849481130.png" /></p>
+<p>Após eliminar a linha 1 <strong>[1]</strong>, a vista passa a ser a seguinte:</p>
 <p><img src="images/10000000000007930000029F72EBB598.png" width="485" height="168" style="width:12.831cm;height:4.44cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007930000029F72EBB598.png" /></p>
 <p>Após eliminar todas as linhas:</p>
-<p><img src="images/10000000000005AF000002571579D8D9.png" width="364" height="150" style="width:9.62cm;height:3.96cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005AF000002571579D8D9.png" /></p>
-<p>Após clicar no botão <strong>[2]</strong>, a lista é restaurada:</p>
-<p><img src="images/10000000000007BE0000033BEA6E9866.png" width="495" height="207" style="width:13.109cm;height:5.47cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007BE0000033BEA6E9866.png" /></p>
+<p><img src="images/10000000000005AF000002571579D8D9.png" width="364" height="150" style="width:9.62cm;height:3.962cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005AF000002571579D8D9.png" /></p>
+<p>Depois de clicar no botão <strong>[2]</strong>, obtém-se novamente a lista:</p>
+<p><img src="images/10000000000007BE0000033BEA6E9866.png" width="495" height="207" style="width:13.109cm;height:5.472cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007BE0000033BEA6E9866.png" /></p>
 
 
 

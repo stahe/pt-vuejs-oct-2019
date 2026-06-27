@@ -12,13 +12,13 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/pt-vuejs-oct-2019/configurar-um-ambiente-de-desenvolvimento.html">
+        <link rel="canonical" href="https://stahe.github.io/pt-vuejs-oct-2019/criacao-de-um-ambiente-de-trabalho.html">
       
       
         <link rel="prev" href="introducao-ao-framework-vuejs.html">
       
       
-        <link rel="next" href="projeto-vuejs-01-o-basico.html">
+        <link rel="next" href="projeto-vuejs-01-os-fundamentos.html">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>2. Configurar um ambiente de desenvolvimento - Uma introdução ao framework Vue.js através de exemplos</title>
+        <title>2. Criação de um ambiente de trabalho - Uma introdução ao framework Vue.js através de exemplos</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2-configurar-um-ambiente-de-desenvolvimento" class="md-skip">
+        <a href="#2-criacao-de-um-ambiente-de-trabalho" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2. Configurar um ambiente de desenvolvimento
+              2. Criação de um ambiente de trabalho
             
           </span>
         </div>
@@ -339,14 +341,14 @@
         
       
       
-      <a href="configurar-um-ambiente-de-desenvolvimento.html" class="md-nav__link md-nav__link--active">
+      <a href="criacao-de-um-ambiente-de-trabalho.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. Configurar um ambiente de desenvolvimento
+    2. Criação de um ambiente de trabalho
   
 
     
@@ -367,14 +369,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-01-o-basico.html" class="md-nav__link">
+      <a href="projeto-vuejs-01-os-fundamentos.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Projeto [vuejs-01]: O Básico
+    3. projeto [vuejs-01]: os fundamentos
   
 
     
@@ -394,14 +396,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-02-utilizacao-da-estrutura-css-bootstrap.html" class="md-nav__link">
+      <a href="projeto-vuejs-02-utilizacao-do-framework-bootstrap-css.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Projeto [vuejs-02]: Utilização da estrutura CSS Bootstrap
+    4. Projeto [vuejs-02]: utilização do framework Bootstrap CSS
   
 
     
@@ -421,14 +423,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-03-tratamento-de-eventos.html" class="md-nav__link">
+      <a href="projeto-vuejs-03-gestao-de-eventos.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. Projeto [vuejs-03]: Tratamento de Eventos
+    5. Projeto [vuejs-03]: gestão de eventos
   
 
     
@@ -448,14 +450,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-04-diretivas-v-model-v-bind-propriedades-computadas-formulario-de-entrada.html" class="md-nav__link">
+      <a href="projeto-vuejs-04-diretrizes-v-model-v-bind-atributos-calculados-formulario-de-introducao-de-dados.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. projeto [vuejs-04]: diretivas [v-model, v-bind], propriedades computadas, formulário de entrada
+    6. projeto [vuejs-04]: diretrizes [v-model, v-bind], atributos calculados, formulário de introdução de dados
   
 
     
@@ -482,7 +484,7 @@
   <span class="md-ellipsis">
     
   
-    7. Projeto [vuejs-05]: diretiva [v-for]
+    7. projeto [vuejs-05]: diretiva [v-for]
   
 
     
@@ -502,14 +504,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-06-definindo-o-layout-de-uma-vista-com-slots.html" class="md-nav__link">
+      <a href="projeto-vuejs-06-formatacao-de-uma-vista-com-slots.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    8. projeto [vuejs-06]: definindo o layout de uma vista com slots
+    8. projeto [vuejs-06]: formatação de uma vista com slots
   
 
     
@@ -529,14 +531,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-07-propagacao-de-eventos-na-hierarquia-de-componentes.html" class="md-nav__link">
+      <a href="projeto-vuejs-07-transmissao-de-eventos-na-hierarquia-de-componentes.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. projeto [vuejs-07]: propagação de eventos na hierarquia de componentes
+    9. Projeto [vuejs-07]: transmissão de eventos na hierarquia de componentes
   
 
     
@@ -563,7 +565,7 @@
   <span class="md-ellipsis">
     
   
-    10. Projeto [vuejs-08]: Eventos independentes da hierarquia de componentes, ciclo de vida dos componentes
+    10. projeto [vuejs-08]: eventos independentes da hierarquia de componentes, ciclo de vida dos componentes
   
 
     
@@ -590,7 +592,7 @@
   <span class="md-ellipsis">
     
   
-    11. Projeto [vuejs-09]: Utilização de um plugin [eventBus]
+    11. projeto [vuejs-09]: utilização de um plugin [eventBus]
   
 
     
@@ -610,14 +612,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-10-plugin-dao-pedidos-http-assincronos.html" class="md-nav__link">
+      <a href="projeto-vuejs-10-plugin-dao-pedidos-assincronos-http.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. Projeto [vuejs-10]: plugin [dao], pedidos HTTP assíncronos
+    12. Projeto [vuejs-10]: plugin [dao], pedidos assíncronos HTTP
   
 
     
@@ -644,7 +646,7 @@
   <span class="md-ellipsis">
     
   
-    13. Projeto [vuejs-11]: roteamento e navegação
+    13. projeto [vuejs-11]: roteamento e navegação
   
 
     
@@ -664,14 +666,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-12-gestao-de-tabelas-html.html" class="md-nav__link">
+      <a href="projeto-vuejs-12-gestao-das-tabelas-html.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Projeto [vuejs-12]: Gestão de tabelas HTML
+    14. Projeto [vuejs-12]: gestão das tabelas HTML
   
 
     
@@ -691,14 +693,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-13-atualizacao-de-um-componente-utilizando-uma-sessao.html" class="md-nav__link">
+      <a href="projeto-vuejs-13-atualizacao-de-um-componente-utilizacao-de-uma-sessao.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. Projeto [vuejs-13]: Atualização de um componente, utilizando uma sessão
+    15. projeto [vuejs-13]: atualização de um componente, utilização de uma sessão
   
 
     
@@ -725,7 +727,7 @@
   <span class="md-ellipsis">
     
   
-    16. Projeto [vuejs-14]: Tornar a sessão reativa
+    16. Projeto [vuejs-14]: tornar a sessão reativa
   
 
     
@@ -752,7 +754,7 @@
   <span class="md-ellipsis">
     
   
-    17. Projeto [vuejs-15]: Utilização do plugin [Vuex]
+    17. Projeto [vuejs-15]: utilização do plugin [Vuex]
   
 
     
@@ -826,14 +828,14 @@
   
   
     <li class="md-nav__item">
-      <a href="implementacao-da-aplicacao-clienteservidor-num-servico-de-alojamento.html" class="md-nav__link">
+      <a href="implantacao-da-aplicacao-clienteservidor-num-servico-de-alojamento.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    20. Implementação da aplicação cliente/servidor num serviço de alojamento
+    20. Implantação da aplicação cliente/servidor num serviço de alojamento
   
 
     
@@ -863,45 +865,45 @@
 
 
 
-<p><a id="refheadingtoc225454640539168"></a></p>
-<h1 id="2-configurar-um-ambiente-de-desenvolvimento">2. <span style="color: #365f91">Configurar um ambiente de desenvolvimento</span></h1>
-<p>Estamos a utilizar o ambiente de desenvolvimento descrito no documento [2]:</p>
+<p><span id="refheadingtoc225454640539168" name="refheadingtoc225454640539168" class="odt-bookmark-anchor"></span></p>
+<h1 id="2-criacao-de-um-ambiente-de-trabalho">2. <span style="color: #365f91">Criação de um ambiente de trabalho</span></h1>
+<p>Retomamos o ambiente de trabalho detalhado no documento [2]:</p>
 <ul>
-  <li>Visual Studio Code (VSCode) para escrever código JavaScript;
+  <li>Visual Studio Code (VSCode) para escrever os códigos JavaScript;
   </li>
-  <li><b>[node.js] </b>para o executar;
+  <li><b>[node.js] </b>para os executar;
   </li>
   <li><b>[npm] </b>para descarregar e instalar as bibliotecas JavaScript de que vamos precisar;
   </li>
 </ul>
 
 <p>Criamos um ambiente de trabalho no <strong>[VSCode]</strong>:</p>
-<p><img src="images/10000000000007180000016F1B193B93.png" width="636" height="128" style="width:16.82cm;height:3.399cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007180000016F1B193B93.png" /></p>
+<p><img src="images/10000000000007180000016F1B193B93.png" width="636" height="129" style="width:16.82cm;height:3.403cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007180000016F1B193B93.png" /></p>
 <ul>
-  <li>Nos passos <b>[1-5]</b>, abrimos uma pasta<b> [vuejs] </b>vazia no <b>[VSCode]</b>;
+  <li>no <b>[1-5]</b>, abrimos uma pasta <b>[vuejs] </b>vazia no <b>[VSCode]</b>;
   </li>
 </ul>
 
 <p><img src="images/10000000000007C30000010B752D2E42.png" width="636" height="85" style="width:16.82cm;height:2.26cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007C30000010B752D2E42.png" /></p>
 <ul>
-  <li>Em <b>[8-10]</b>, instalamos a dependência<b> [@vue/cli]</b>, que nos permitirá inicializar um projeto<b> [Vue.js]</b>. Esta dependência inclui um grande número de pacotes (várias centenas);
+  <li>em <b>[8-10]</b>, instalamos a dependência <b>[@vue/cli]</b>, que nos permitirá inicializar um projeto <b>[vue.js]</b>. Esta dependência traz consigo um grande número de pacotes (várias centenas);
   </li>
 </ul>
 
-<p>No mesmo terminal, digitamos então o comando <strong>[vue create .],</strong> que cria um projeto <strong>[Vue.js]</strong> no diretório atual (.):</p>
-<p><img src="images/100000000000076500000133CEB6CD5E.png" width="636" height="103" style="width:16.82cm;height:2.729cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000076500000133CEB6CD5E.png" /></p>
+<p>No mesmo terminal, digita-se em seguida o comando <strong>[vue create .],</strong> que solicita a criação de um projeto <strong>[vue.js]</strong> na pasta atual (.) :</p>
+<p><img src="images/100000000000076500000133CEB6CD5E.png" width="636" height="103" style="width:16.82cm;height:2.722cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000076500000133CEB6CD5E.png" /></p>
 <ul>
-  <li>Em <b>[13]</b>, inicia-se uma série de perguntas para configurar o projeto;
+  <li>no <b>[13]</b>, inicia-se uma série de perguntas que servem para configurar o projeto;
   </li>
 </ul>
 
-<p><img src="images/10000000000001C7000001FE8A3A4F63.png" width="159" height="178" style="width:4.21cm;height:4.718cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001C7000001FE8A3A4F63.png" /></p>
+<p><img src="images/10000000000001C7000001FE8A3A4F63.png" width="159" height="178" style="width:4.21cm;height:4.72cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001C7000001FE8A3A4F63.png" /></p>
 <ul>
-  <li>Depois de responder a todas as perguntas, são descarregados novos pacotes e é gerado um projeto no diretório atual <b>[14]</b>.
+  <li>assim que todas as perguntas forem respondidas, são descarregados novos pacotes e é gerado um projeto na pasta atual, <b>[14]</b>.
   </li>
 </ul>
 
-<p>Vamos dar uma olhada no que foi gerado. O ficheiro <strong>[package.json]</strong> é o seguinte:</p>
+<p>Vamos ver o que foi gerado. O ficheiro <strong>[package.json]</strong> é o seguinte:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-vbscript">
 <span class="odt-code-line"><span class="odt-code-line-content">{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#2e75b6">&quot;name&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;vuejs&quot;</span><span style="color:#000000">,</span></span></span>
@@ -958,82 +960,108 @@
 
 <p><strong>Comentários</strong></p>
 <ul>
-  <li>linhas 14–22: Entre as dependências necessárias para o desenvolvimento, vemos referências às duas ferramentas <b>[eslint, babel] </b>já utilizadas nos dois capítulos anteriores. A estas juntam-se plugins para estas duas ferramentas destinados a serem utilizados no <b>[vue.js]</b>;
+  <li>linhas 14-22: nas dependências necessárias para o desenvolvimento, observam-se referências às duas ferramentas <b>[eslint, babel] </b>já utilizadas nos dois capítulos anteriores. A estas juntam-se plugins destas duas ferramentas destinados à sua utilização no âmbito do <b>[vue.js]</b>;
   </li>
-  <li>linha 34: o pacote<b> [babel-eslint] </b>irá tratar da transpilagem de ES6 para ES5 do código JavaScript;
+  <li>linha 34: é o pacote <b>[babel-eslint] </b>que irá realizar a transpilagem de ES6 para ES5 dos códigos jS;
   </li>
-  <li>linhas 5–9: foram criadas três tarefas<b> [npm]</b>:
+  <li>linhas 5-9: foram criadas três tarefas <b>[npm]</b>:
     <ul>
-      <li><b>[build]</b>: utilizada para compilar a versão do projeto pronta para produção;
+      <li><b>[build]</b>: serve para construir a versão compilada do projeto, pronta para entrar em produção;
       </li>
-      <li><b>[serve]</b>: executa o projeto num servidor web. Esta ferramenta é utilizada para realizar testes durante o desenvolvimento. Tal como acontece com <b>o [webpack-dev-server]</b>, a modificação do código-fonte do projeto desencadeia automaticamente a recompilação do projeto e o seu recarregamento pelo servidor web;
+      <li><b>[serve]</b>: executa o projeto num servidor web. É com esta ferramenta que são realizados os testes durante o desenvolvimento. Tal como acontece com <b>o [webpack-dev-server]</b>, uma alteração no código-fonte do projeto provoca automaticamente a recompilação do projeto e o seu recarregamento pelo servidor web;
       </li>
-      <li><b>[lint]</b>: utilizada para analisar código JavaScript e gerar relatórios. Não iremos utilizar esta ferramenta aqui;
+      <li><b>[lint]</b>: serve para analisar os códigos jS e gerar relatórios. Não utilizaremos esta ferramenta aqui;
       </li>
     </ul>
   </li>
 </ul>
 
 <p>Foi gerado um ficheiro <strong>[README.md]</strong> com o seguinte conteúdo:</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-markdown">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008000"># vuejs</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008000">## Project setup</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">```</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">npm install</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">```</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008000">### Compiles and hot-reloads for development</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">```</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">npm run serve</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">```</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008000">### Compiles and minifies for production</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">```</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">npm run build</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">```</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008000">### Run your tests</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">```</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">npm run test</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">```</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008000">### Lints and fixes files</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">```</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">npm run lint</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">```</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008000">### Customize configuration</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">See </span><span style="color:#a31515">[Configuration Reference]</span><span style="color:#000000">(https://cli.vuejs.org/config/).</span></span></span>
-</code></pre></div>
-
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="gh"># vuejs</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="gu">## Configuração do projeto</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="sb">```</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="sb">npm install</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="sb">```</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="gu">### Compila e atualiza dinamicamente para desenvolvimento</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="sb">```</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="sb">npm run serve</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="sb">```</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="gu">### Compilações e minificação para produção</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="sb">```</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="sb">npm run build</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="sb">```</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="gu">### Executar os testes</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="sb">```</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="sb">npm run test</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="sb">```</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="gu">### Verifica e corrige ficheiros</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="sb">```</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="sb">npm run lint</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="sb">```</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="gu">### Personalizar a configuração</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a>See [<span class="nt">Configuration Reference</span>](<span class="na">https://cli.vuejs.org/config/</span>).
+</code></pre></div></td></tr></table></div>
 <p>Este ficheiro resume os comandos a utilizar para gerir o projeto.</p>
-<p>Sabemos que no <strong>[VSCode]</strong> estão disponíveis tarefas <strong>[npm]</strong> para execução:</p>
-<p><img src="images/10000000000006FF000001C5AB06CAC3.png" width="636" height="161" style="width:16.82cm;height:4.255cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006FF000001C5AB06CAC3.png" /></p>
+<p>Sabemos que, no <strong>[VSCode]</strong>, as tarefas <strong>[npm]</strong> são propostas para execução:</p>
+<p><img src="images/10000000000006FF000001C5AB06CAC3.png" width="636" height="161" style="width:16.82cm;height:4.249cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006FF000001C5AB06CAC3.png" /></p>
 <ul>
-  <li>em <b>[1-3]</b>, executamos o comando<b> [serve]</b>, que irá compilar e, em seguida, executar o projeto <b>[4-5]</b>;
+  <li>no <b>[1-3]</b>, executamos o comando <b>[serve]</b>, que irá compilar e, em seguida, executar o projeto <b>[4-5]</b>;
   </li>
 </ul>
 
-<p>No URL <strong>[http://localhost:8080]</strong>, obtemos a seguinte página:</p>
-<p><img src="images/10000000000005C60000049A83E55A37.png" width="370" height="295" style="width:9.783cm;height:7.796cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005C60000049A83E55A37.png" /></p>
+<p>Ao executar o URL e <strong>o [http://localhost:8080]</strong>, obtemos a seguinte página:</p>
+<p><img src="images/10000000000005C60000049A83E55A37.png" width="370" height="294" style="width:9.783cm;height:7.789cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005C60000049A83E55A37.png" /></p>
 <p>Explicaremos um pouco mais adiante o que levou a esta página.</p>
 <p>Vamos continuar a configurar o nosso ambiente de trabalho:</p>
-<p><img src="images/10000000000007930000036A2200C029.png" width="582" height="262" style="width:15.392cm;height:6.937cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007930000036A2200C029.png" /></p>
+<p><img src="images/10000000000007930000036A2200C029.png" width="582" height="262" style="width:15.392cm;height:6.939cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007930000036A2200C029.png" /></p>
 <ul>
-  <li>em <b>[2] </b>acima, vemos indicadores<b> [git]</b>. <b>[git] </b>é um sistema de controlo de versões de código-fonte que permite gerir versões sucessivas do código e partilhá-las entre programadores. Vamos desativar esta ferramenta para o projeto;
+  <li>No <b>[2] </b>acima, vemos os indicadores <b>[git]</b>. <b>O [git] </b>é um gestor de código-fonte que permite gerir versões sucessivas do mesmo e partilhá-las entre programadores. Vamos desativar esta ferramenta para o projeto;
   </li>
-  <li>Em <b>[3-5]</b>, acedemos às propriedades do projeto;
+  <li>em <b>[3-5]</b>, vamos às propriedades do projeto;
   </li>
 </ul>
 
-<p><img src="images/100000000000042B000002D0FFC38A47.png" width="320" height="216" style="width:8.47cm;height:5.715cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000042B000002D0FFC38A47.png" /></p>
+<p><img src="images/100000000000042B000002D0FFC38A47.png" width="320" height="216" style="width:8.47cm;height:5.72cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000042B000002D0FFC38A47.png" /></p>
 <ul>
-  <li>em <b>[9-10]</b>, desativamos a utilização do <b>[git] </b>no projeto;
+  <li>no <b>[9-10]</b>, desativamos a utilização do <b>[git] </b>no projeto;
   </li>
 </ul>
 
-<p>Iremos escrever vários testes para demonstrar como <strong>o [vue.js]</strong> funciona. No entanto, não queremos criar um novo projeto de cada vez, pois isso exigiria a geração de uma pasta <strong>[node_modules]</strong> sempre, e esta pasta tem vários megabytes de tamanho. Vamos rever as tarefas <strong>[npm]</strong> no ficheiro <strong>[package.json]</strong>:</p>
+<p>Vamos escrever vários testes para demonstrar o funcionamento do <strong>[vue.js]</strong>. No entanto, não queremos criar um novo projeto de cada vez, pois isso implicaria gerar sempre uma pasta <strong>[node_modules]</strong>, que ocupa várias centenas de megabytes. Voltemos às tarefas <strong>[npm]</strong> do ficheiro <strong>[package.json]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#2e75b6">&quot;scripts&quot;</span><span style="color:#000000">: {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#2e75b6">&quot;serve&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;vue-cli-service serve vuejs-00/main.js&quot;</span><span style="color:#000000">,</span></span></span>
@@ -1043,7 +1071,7 @@
 </code></pre></div>
 
 <ul>
-  <li>linha 2: o comando<b> [serve] </b>utiliza por predefinição:
+  <li>linha 2: o comando <b>[serve] </b>utiliza, por predefinição:
     <ul>
       <li>o ficheiro <b>[public/index.html]</b>;
       </li>
@@ -1053,36 +1081,36 @@
   </li>
 </ul>
 
-<p>Na linha 2, pode especificar o ponto de entrada do projeto para o comando <strong>[serve]</strong>, por exemplo:</p>
+<p>Na linha 2, é possível especificar no comando <strong>[serve]</strong> o ponto de entrada do projeto, por exemplo:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#2e75b6">&quot;serve&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;vue-cli-service serve vuejs-00/main.js&quot;</span><span style="color:#000000">,</span></span></span>
 </code></pre></div>
 
 <p>Vamos experimentar:</p>
-<p><img src="images/10000000000007DE00000279D843579C.png" width="636" height="200" style="width:16.82cm;height:5.286cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007DE00000279D843579C.png" /></p>
+<p><img src="images/10000000000007DE00000279D843579C.png" width="636" height="200" style="width:16.82cm;height:5.279cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007DE00000279D843579C.png" /></p>
 <ul>
-  <li>em <b>[1]</b>, a pasta<b> [src] </b>foi renomeada para <b>[vuejs-00]</b>;
+  <li>no <b>[1]</b>, a pasta <b>[src] </b>foi renomeada para <b>[vuejs-00]</b>;
   </li>
-  <li>Em <b>[2-3]</b>, o comando<b> [serve] </b>foi modificado;
+  <li>em <b>[2-3]</b>, o comando <b>[serve]</b> foi alterado;
   </li>
-  <li>Em <b>[4-6]</b>, executamos o projeto;
+  <li>em <b>[4-6]</b>, executa-se o projeto;
   </li>
 </ul>
 
-<p>Obtemos o mesmo resultado que antes:</p>
-<p><img src="images/10000000000004FB00000392CB7FEF0D.png" width="319" height="228" style="width:8.43cm;height:6.043cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004FB00000392CB7FEF0D.png" /></p>
-<p>Para os nossos testes, procederemos da seguinte forma:</p>
+<p>Obtém-se o mesmo resultado que anteriormente:</p>
+<p><img src="images/10000000000004FB00000392CB7FEF0D.png" width="319" height="228" style="width:8.43cm;height:6.04cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004FB00000392CB7FEF0D.png" /></p>
+<p>Para os nossos testes, procederemos, portanto, da seguinte forma:</p>
 <ul>
-  <li>escrevendo código numa pasta<b> [vuejs-xx] </b>dentro do projeto;
+  <li>escrever código numa pasta <b>[vuejs-xx] </b>do projeto;
   </li>
-  <li>testar este projeto utilizando o comando <b>[vue-cli-service serve vuejs-xx/main.js] </b>no ficheiro<b> [package.json]</b>;
+  <li>teste deste projeto com o comando <b>[vue-cli-service serve vuejs-xx/main.js] </b>no ficheiro <b>[package.json]</b>;
   </li>
 </ul>
 
-<p>Quando o servidor de desenvolvimento está em execução, qualquer alteração num dos ficheiros do projeto desencadeia uma recompilação. Por esse motivo, desativamos o modo <strong>[Auto Save]</strong> no <strong>[VSCode]</strong>. Com efeito, não queremos que ocorra uma recompilação sempre que digitamos caracteres num dos ficheiros do projeto. Só queremos que a recompilação ocorra em determinados momentos:</p>
-<p><img src="images/100000000000022B000002F6F4291A79.png" width="166" height="227" style="width:4.399cm;height:6.008cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000022B000002F6F4291A79.png" /></p>
+<p>Quando o servidor de desenvolvimento é iniciado, qualquer alteração num dos ficheiros do projeto provoca uma recompilação. Por este motivo, desativamos o modo <strong>[Auto Save]</strong> do <strong>[VSCode]</strong>. Com efeito, não queremos que haja recompilação sempre que se introduzam caracteres num dos ficheiros do projeto. Só queremos que a recompilação ocorra em determinados momentos:</p>
+<p><img src="images/100000000000022B000002F6F4291A79.png" width="166" height="228" style="width:4.399cm;height:6.02cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000022B000002F6F4291A79.png" /></p>
 <ul>
-  <li>em <b>[2]</b>, a opção<b> [Auto Save] </b>não deve estar marcada;
+  <li>no <b>[2]</b>, a opção <b>[Auto Save] </b>não deve estar marcada;
   </li>
 </ul>
 

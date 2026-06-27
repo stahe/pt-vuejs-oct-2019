@@ -12,13 +12,13 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/pt-vuejs-oct-2019/projeto-vuejs-02-utilizacao-da-estrutura-css-bootstrap.html">
+        <link rel="canonical" href="https://stahe.github.io/pt-vuejs-oct-2019/projeto-vuejs-03-gestao-de-eventos.html">
       
       
-        <link rel="prev" href="projeto-vuejs-01-o-basico.html">
+        <link rel="prev" href="projeto-vuejs-02-utilizacao-do-framework-bootstrap-css.html">
       
       
-        <link rel="next" href="projeto-vuejs-03-tratamento-de-eventos.html">
+        <link rel="next" href="projeto-vuejs-04-diretrizes-v-model-v-bind-atributos-calculados-formulario-de-introducao-de-dados.html">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>4. Projeto [vuejs-02]: Utilização da estrutura CSS Bootstrap - Uma introdução ao framework Vue.js através de exemplos</title>
+        <title>5. Projeto [vuejs-03]: gestão de eventos - Uma introdução ao framework Vue.js através de exemplos</title>
       
     
     
@@ -56,6 +56,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -92,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#4-projeto-vuejs-02-utilizacao-da-estrutura-css-bootstrap" class="md-skip">
+        <a href="#5-projeto-vuejs-03-gestao-de-eventos" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              4. Projeto [vuejs-02]: Utilização da estrutura CSS Bootstrap
+              5. Projeto [vuejs-03]: gestão de eventos
             
           </span>
         </div>
@@ -330,14 +332,14 @@
   
   
     <li class="md-nav__item">
-      <a href="configurar-um-ambiente-de-desenvolvimento.html" class="md-nav__link">
+      <a href="criacao-de-um-ambiente-de-trabalho.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. Configurar um ambiente de desenvolvimento
+    2. Criação de um ambiente de trabalho
   
 
     
@@ -357,14 +359,41 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-01-o-basico.html" class="md-nav__link">
+      <a href="projeto-vuejs-01-os-fundamentos.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. Projeto [vuejs-01]: O Básico
+    3. projeto [vuejs-01]: os fundamentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="projeto-vuejs-02-utilizacao-do-framework-bootstrap-css.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Projeto [vuejs-02]: utilização do framework Bootstrap CSS
   
 
     
@@ -400,7 +429,7 @@
   <span class="md-ellipsis">
     
   
-    4. Projeto [vuejs-02]: Utilização da estrutura CSS Bootstrap
+    5. Projeto [vuejs-03]: gestão de eventos
   
 
     
@@ -411,14 +440,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="projeto-vuejs-02-utilizacao-da-estrutura-css-bootstrap.html" class="md-nav__link md-nav__link--active">
+      <a href="projeto-vuejs-03-gestao-de-eventos.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. Projeto [vuejs-02]: Utilização da estrutura CSS Bootstrap
+    5. Projeto [vuejs-03]: gestão de eventos
   
 
     
@@ -444,10 +473,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#41-instalacao-da-estrutura-bootstrapvue" class="md-nav__link">
+  <a href="#51-o-script-principal-mainjs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.1. Instalação da estrutura [BootstrapVue]
+        5.1. O script principal [main.js]
       
     </span>
   </a>
@@ -455,10 +484,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#42-o-script-mainjs" class="md-nav__link">
+  <a href="#52-o-componente-principal-appvue" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.2. O script [main.js]
+        5.2. O componente principal [App.vue]
       
     </span>
   </a>
@@ -466,10 +495,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#43-o-componente-appvue" class="md-nav__link">
+  <a href="#53-o-componente-clickonme" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.3. O componente [App.vue]
+        5.3. O componente [ClickOnMe]
       
     </span>
   </a>
@@ -477,21 +506,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#44-o-hellobootstrap" class="md-nav__link">
+  <a href="#54-execucao-do-projeto" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.4. O [HelloBootstrap]
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#45-executar-o-projeto" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.5. Executar o projeto
+        5.4. Execução do projeto
       
     </span>
   </a>
@@ -513,41 +531,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-03-tratamento-de-eventos.html" class="md-nav__link">
+      <a href="projeto-vuejs-04-diretrizes-v-model-v-bind-atributos-calculados-formulario-de-introducao-de-dados.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. Projeto [vuejs-03]: Tratamento de Eventos
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="projeto-vuejs-04-diretivas-v-model-v-bind-propriedades-computadas-formulario-de-entrada.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    6. projeto [vuejs-04]: diretivas [v-model, v-bind], propriedades computadas, formulário de entrada
+    6. projeto [vuejs-04]: diretrizes [v-model, v-bind], atributos calculados, formulário de introdução de dados
   
 
     
@@ -574,7 +565,7 @@
   <span class="md-ellipsis">
     
   
-    7. Projeto [vuejs-05]: diretiva [v-for]
+    7. projeto [vuejs-05]: diretiva [v-for]
   
 
     
@@ -594,14 +585,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-06-definindo-o-layout-de-uma-vista-com-slots.html" class="md-nav__link">
+      <a href="projeto-vuejs-06-formatacao-de-uma-vista-com-slots.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    8. projeto [vuejs-06]: definindo o layout de uma vista com slots
+    8. projeto [vuejs-06]: formatação de uma vista com slots
   
 
     
@@ -621,14 +612,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-07-propagacao-de-eventos-na-hierarquia-de-componentes.html" class="md-nav__link">
+      <a href="projeto-vuejs-07-transmissao-de-eventos-na-hierarquia-de-componentes.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    9. projeto [vuejs-07]: propagação de eventos na hierarquia de componentes
+    9. Projeto [vuejs-07]: transmissão de eventos na hierarquia de componentes
   
 
     
@@ -655,7 +646,7 @@
   <span class="md-ellipsis">
     
   
-    10. Projeto [vuejs-08]: Eventos independentes da hierarquia de componentes, ciclo de vida dos componentes
+    10. projeto [vuejs-08]: eventos independentes da hierarquia de componentes, ciclo de vida dos componentes
   
 
     
@@ -682,7 +673,7 @@
   <span class="md-ellipsis">
     
   
-    11. Projeto [vuejs-09]: Utilização de um plugin [eventBus]
+    11. projeto [vuejs-09]: utilização de um plugin [eventBus]
   
 
     
@@ -702,14 +693,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-10-plugin-dao-pedidos-http-assincronos.html" class="md-nav__link">
+      <a href="projeto-vuejs-10-plugin-dao-pedidos-assincronos-http.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. Projeto [vuejs-10]: plugin [dao], pedidos HTTP assíncronos
+    12. Projeto [vuejs-10]: plugin [dao], pedidos assíncronos HTTP
   
 
     
@@ -736,7 +727,7 @@
   <span class="md-ellipsis">
     
   
-    13. Projeto [vuejs-11]: roteamento e navegação
+    13. projeto [vuejs-11]: roteamento e navegação
   
 
     
@@ -756,14 +747,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-12-gestao-de-tabelas-html.html" class="md-nav__link">
+      <a href="projeto-vuejs-12-gestao-das-tabelas-html.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. Projeto [vuejs-12]: Gestão de tabelas HTML
+    14. Projeto [vuejs-12]: gestão das tabelas HTML
   
 
     
@@ -783,14 +774,14 @@
   
   
     <li class="md-nav__item">
-      <a href="projeto-vuejs-13-atualizacao-de-um-componente-utilizando-uma-sessao.html" class="md-nav__link">
+      <a href="projeto-vuejs-13-atualizacao-de-um-componente-utilizacao-de-uma-sessao.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. Projeto [vuejs-13]: Atualização de um componente, utilizando uma sessão
+    15. projeto [vuejs-13]: atualização de um componente, utilização de uma sessão
   
 
     
@@ -817,7 +808,7 @@
   <span class="md-ellipsis">
     
   
-    16. Projeto [vuejs-14]: Tornar a sessão reativa
+    16. Projeto [vuejs-14]: tornar a sessão reativa
   
 
     
@@ -844,7 +835,7 @@
   <span class="md-ellipsis">
     
   
-    17. Projeto [vuejs-15]: Utilização do plugin [Vuex]
+    17. Projeto [vuejs-15]: utilização do plugin [Vuex]
   
 
     
@@ -918,14 +909,14 @@
   
   
     <li class="md-nav__item">
-      <a href="implementacao-da-aplicacao-clienteservidor-num-servico-de-alojamento.html" class="md-nav__link">
+      <a href="implantacao-da-aplicacao-clienteservidor-num-servico-de-alojamento.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    20. Implementação da aplicação cliente/servidor num serviço de alojamento
+    20. Implantação da aplicação cliente/servidor num serviço de alojamento
   
 
     
@@ -955,163 +946,132 @@
 
 
 
-<p><a id="refheadingtoc2479512728496130"></a></p>
-<h1 id="4-projeto-vuejs-02-utilizacao-da-estrutura-css-bootstrap">4. <span style="color: #365f91"><strong>Projeto</strong> [vuejs-02]<strong>: Utilização da estrutura CSS Bootstrap</strong></span></h1>
-<p>O projeto <strong>[vuejs-02]</strong> demonstra a utilização do Bootstrap num projeto <strong>[Vue.js]</strong>. Esta é a estrutura CSS que será utilizada em todos os nossos projetos. Iremos utilizar uma variação do Bootstrap chamada <strong>[BootstrapVue] [https://bootstrap-vue.js.org/]</strong>.</p>
-<p>A estrutura de diretórios do projeto será a seguinte:</p>
-<p><img src="images/1000000000000173000002B693B89EF0.png" width="130" height="243" style="width:3.44cm;height:6.435cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000173000002B693B89EF0.png" /></p>
-<p><strong>Nota</strong>: No documento abaixo, a pasta <strong>[vuejs]</strong> foi renomeada <strong>para [cours] [1]</strong>.</p>
-<p><a id="refheadingtoc2479532728496130"></a></p>
-<h2 id="41-instalacao-da-estrutura-bootstrapvue">4.1. <span style="color: #4f81bd"><strong>Instalação da estrutura</strong> [BootstrapVue]</span></h2>
-<p><strong>O [BootstrapVue]</strong> é um framework que adicionamos ao projeto utilizando a ferramenta <strong>[npm]</strong>:</p>
-<p><img src="images/100000000000083B000002D93736EEAA.png" width="685" height="237" style="width:18.12cm;height:6.269cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000083B000002D93736EEAA.png" /></p>
+<p><span id="refheadingtoc2479632728496130" name="refheadingtoc2479632728496130" class="odt-bookmark-anchor"></span></p>
+<h1 id="5-projeto-vuejs-03-gestao-de-eventos">5. <span style="color: #365f91"><strong>Projeto</strong> [vuejs-03]<strong>: gestão de eventos</strong></span></h1>
+<p>O projeto <strong>[vuejs-03]</strong> introduz dois conceitos:</p>
 <ul>
-  <li>Em <b>[1]</b>, estamos, portanto, a instalar duas frameworks: <b>[Bootstrap] </b>e a sua variante <b>[BootstrapVue]</b>;
+  <li>a gestão de um evento <b>[clic] </b>num botão;
   </li>
-  <li>em <b>[2]</b>, ambas as dependências aparecem no ficheiro<b> [package.json]</b>;
+  <li>a diretiva <b>[v-if], </b>que permite apresentar um bloco HTML de forma condicional;
   </li>
 </ul>
-<p><a id="refheadingtoc2479552728496130"></a></p>
-<h2 id="42-o-script-mainjs">4.2. <span style="color: #4f81bd"><strong>O script</strong> [main.js]</span></h2>
-<p>O script principal <strong>[main.js]</strong> é o seguinte:</p>
+
+<p>A estrutura do projeto é a seguinte:</p>
+<p><img src="images/100000000000011F00000132AC670D58.png" width="101" height="107" style="width:2.662cm;height:2.829cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000011F00000132AC670D58.png" /></p>
+<p><span id="refheadingtoc2479652728496130" name="refheadingtoc2479652728496130" class="odt-bookmark-anchor"></span></p>
+<h2 id="51-o-script-principal-mainjs">5.1. <span style="color: #4f81bd"><strong>O script principal</strong> [main.js]</span></h2>
+<p>O script <strong>[main.js]</strong> permanece inalterado:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span class="odt-code-line-content">// imports</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// importações</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> Vue </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;vue&#x27;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> App </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./App.vue&#x27;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// plugins</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> BootstrapVue </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;bootstrap-vue&#x27;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">Vue.use(BootstrapVue);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// bootstrap</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;bootstrap/dist/css/bootstrap.css&#x27;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;bootstrap-vue/dist/bootstrap-vue.css&#x27;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// configuration</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// configuração</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">Vue.config.productionTip = </span><span style="color:#0000ff">false</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// instanciation projet [App]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// instanciação do projeto [App]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">new</span><span style="color:#000000"> Vue({</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  render: h =&gt; h(App),</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">}).$mount(</span><span style="color:#a31515">&#x27;#app&#x27;</span><span style="color:#000000">)</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}).$mount(&#x27;#app&#x27;)</span></span>
 </code></pre></div>
 
-<ul>
-  <li>linha 2: importar o framework<b> [Vue]</b>;
-  </li>
-  <li>linha 3: importar a vista principal;
-  </li>
-  <li>linha 6: importar o framework<b> [BootstrapVue]</b>;
-  </li>
-  <li>linha 7: este framework foi concebido como um plugin para o framework<b> [Vue]</b>. A linha 7 inclui este plugin no framework<b> [Vue]</b>;
-  </li>
-  <li>linhas 10–11: importar os ficheiros CSS das estruturas <b>[Bootstrap] </b>e <b>[BootstrapVue]</b>;
-  </li>
-  <li>As linhas 5–11 são, portanto, inteiramente dedicadas à utilização <b>do [BootstrapVue]</b>. O resto do código é idêntico ao que vimos no parágrafo anterior;
-  </li>
-</ul>
-<p><a id="refheadingtoc2479572728496130"></a></p>
-<h2 id="43-o-componente-appvue">4.3. <span style="color: #4f81bd"><strong>O componente</strong> [App.vue]</span></h2>
+<p><span id="refheadingtoc2479672728496130" name="refheadingtoc2479672728496130" class="odt-bookmark-anchor"></span></p>
+<h2 id="52-o-componente-principal-appvue">5.2. <span style="color: #4f81bd"><strong>O componente principal</strong> [App.vue]</span></h2>
+<p>O componente principal <strong>[App.vue]</strong> utiliza o componente <strong>[ClickOnMe]</strong> em vez do componente <strong>[HelloBootstrap]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-container</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-card</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- Bootstrap Jumbotron --&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-jumbotron</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">&lt;!-- ligne --&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-row</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#000000">&lt;!-- colonne de largeur 4 --&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-col</span><span style="color:#000000"> </span><span style="color:#ff0000">cols</span><span style="color:#0000ff">=&quot;4&quot;&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">            </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">img</span><span style="color:#000000"> </span><span style="color:#ff0000">src</span><span style="color:#0000ff">=&quot;./assets/logo.jpg&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">alt</span><span style="color:#0000ff">=&quot;Cerisier en fleurs&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-col</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#000000">&lt;!-- colonne de largeur 8 --&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-col</span><span style="color:#000000"> </span><span style="color:#ff0000">cols</span><span style="color:#0000ff">=&quot;8&quot;&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">            </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h1</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Calculez votre impôt</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h1</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-col</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-row</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-jumbotron</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">HelloBootstrap</span><span style="color:#000000"> </span><span style="color:#ff0000">msg</span><span style="color:#0000ff">=&quot;Hello Bootstrap !&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- Bootstrap Jumbotron --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-jumbotron</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">&lt;!-- linha --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-row</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">&lt;!-- coluna com largura 4 --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-col</span><span style="color:#000000"> </span><span style="color:#ff0000">cols</span><span style="color:#0000ff">=&quot;4&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">img</span><span style="color:#000000"> </span><span style="color:#ff0000">src</span><span style="color:#0000ff">=&quot;./assets/logo.jpg&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">alt</span><span style="color:#0000ff">=&quot;Cerisier en fleurs&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-col</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">&lt;!-- coluna com largura 8 --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-col</span><span style="color:#000000"> </span><span style="color:#ff0000">cols</span><span style="color:#0000ff">=&quot;8&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h1</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Calculez votre impôt</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h1</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-col</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-row</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-jumbotron</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- componente --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">ClickOnMe</span><span style="color:#000000"> </span><span style="color:#ff0000">msg</span><span style="color:#0000ff">=&quot;Information...&quot;</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-card</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-container</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">import</span><span style="color:#000000"> HelloBootstrap </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;./components/HelloBootstrap.vue&quot;</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;app&quot;</span><span style="color:#000000">,</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    components: {</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      HelloBootstrap</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  };</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> ClickOnMe </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;./components/ClickOnMe.vue&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  name: </span><span style="color:#a31515">&quot;app&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  components: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    ClickOnMe</span><span style="color:#000000"></span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p><strong>Comentários</strong></p>
-<ul>
-  <li>linhas 1–21: todas as tags &lt;b-xx&gt; são tags do framework<b> [BootstrapVue]</b>;
-  </li>
-  <li>linhas 2, 20: a tag &lt;b-container&gt; define um contentor Bootstrap. Dentro deste contentor, podemos definir linhas usando a tag &lt;b-row&gt; e colunas usando a tag &lt;b-col&gt;;
-  </li>
-  <li>linhas 3, 19: a tag &lt;b-card&gt; define um «cartão» Bootstrap. Visualmente, este aparece como um retângulo com uma borda;
-  </li>
-  <li>linhas 5, 17: a tag &lt;b-jumbotron&gt; permite destacar uma secção da página, neste caso uma imagem e algum texto. Iremos utilizá-la nos nossos vários projetos como um identificador visual do projeto;
-  </li>
-  <li>linha 7: a tag &lt;b-row&gt; define uma linha;
-  </li>
-  <li>linhas 9–11: a tag &lt;b-col&gt; define uma coluna na linha anterior. O Bootstrap atribui 12 colunas a cada linha. O atributo<b> [cols=’4’] </b>indica que a coluna &lt;b-col&gt; ocupará 4 dessas 12 colunas;
-  </li>
-  <li>Linha 10: uma imagem
-  </li>
-  <li>linhas 13–15: uma coluna que ocupará 8 das 12 colunas da linha. Colocamos algum texto ali;
-  </li>
-  <li>linha 18: utilização de um componente chamado <b>[HelloBootstrap] </b>com uma propriedade denominada <b>[msg]</b>;
-  </li>
-  <li>linhas 24–33: a parte &lt;script&gt; do componente;
-  </li>
-  <li>linhas 29–31: o componente<b> [HelloBootstrap] </b>utilizado na linha 18 é exportado. Para ser reconhecido, deve ser importado na linha 25;
-  </li>
-</ul>
-
-<p>O resultado é o seguinte:</p>
-<p><img src="images/10000000000008D9000002B38C0F4F3C.png" width="566" height="173" style="width:14.981cm;height:4.57cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000008D9000002B38C0F4F3C.png" /></p>
-<ul>
-  <li>em <b>[1]</b>, a tag &lt;b-card&gt;;
-  </li>
-  <li>em <b>[2]</b>, a tag &lt;jumbotron&gt;;
-  </li>
-  <li>em <b>[3]</b>, a imagem de 4 colunas;
-  </li>
-  <li>em <b>[4]</b>, o texto de 8 colunas;
-  </li>
-</ul>
-<p><a id="refheadingtoc2479592728496130"></a></p>
-<h2 id="44-o-hellobootstrap">4.4. <span style="color: #4f81bd">O [HelloBootstrap]</span></h2>
-<p><strong>[HelloBootstrap]</strong> é o seguinte componente:</p>
+<p><span id="refheadingtoc2479692728496130" name="refheadingtoc2479692728496130" class="odt-bookmark-anchor"></span></p>
+<h2 id="53-o-componente-clickonme">5.3. <span style="color: #4f81bd"><strong>O componente</strong> [ClickOnMe]</span></h2>
+<p>O componente <strong>[ClickOnMe]</strong> introduz os novos conceitos:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- message on green background --&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-col</span><span style="color:#000000"> </span><span style="color:#ff0000">cols</span><span style="color:#0000ff">=&quot;12&quot;&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;success&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">align</span><span style="color:#0000ff">=&quot;center&quot;&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span><span style="font-weight:bold;color:#000000">[vuejs-02]</span><span style="color:#000000"> : bootstrap</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-col</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- message on yellow background --&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-col</span><span style="color:#000000"> </span><span style="color:#ff0000">cols</span><span style="color:#0000ff">=&quot;12&quot;&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;warning&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">align</span><span style="color:#0000ff">=&quot;center&quot;&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span><span style="font-weight:bold;color:#000000">{{</span><span style="color:#800080">msg</span><span style="font-weight:bold;color:#000000">}}</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-col</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- mensagem sobre fundo verde --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;success&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">align</span><span style="color:#0000ff">=&quot;center&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span><span style="font-weight:bold;color:#000000">[vuejs-03]</span><span style="color:#000000"> : événement @click, directive v-if, méthodes</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- mensagem sobre fundo amarelo --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-alert</span><span style="color:#000000"> </span><span style="color:#ff0000">show</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;warning&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">align</span><span style="color:#0000ff">=&quot;center&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">v-if</span><span style="color:#0000ff">=&quot;show&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span><span style="font-weight:bold;color:#000000">{{</span><span style="color:#800080">msg</span><span style="font-weight:bold;color:#000000">}}</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-alert</span><span style="color:#0000ff">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- botão azul --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">b-button</span><span style="color:#000000"> </span><span style="color:#ff0000">variant</span><span style="color:#0000ff">=&quot;primary&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">@click</span><span style="color:#0000ff">=&quot;changer&quot;&gt;</span><span style="font-weight:bold;color:#000000">{{</span><span style="color:#800080">buttonTitle</span><span style="font-weight:bold;color:#000000">}}</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">b-button</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">div</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">template</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;HelloBootstrap&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    name: </span><span style="color:#a31515">&quot;ClickOnMe&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// parâmetros do componente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    props: {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      msg: String</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// atributos do componente</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    data() {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// título do botão</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        buttonTitle: </span><span style="color:#a31515">&quot;Cacher&quot;</span><span style="color:#000000">,</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#000000">// controla a exibição da mensagem</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        show: </span><span style="color:#0000ff">true</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      };</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    },</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// métodos</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    methods: {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// mostra/oculta a mensagem</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      changer() {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">if</span><span style="color:#000000"> (</span><span style="color:#0000ff">this</span><span style="color:#000000">.show) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#000000">// oculta a mensagem</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          </span><span style="color:#0000ff">this</span><span style="color:#000000">.show = </span><span style="color:#0000ff">false</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          </span><span style="color:#0000ff">this</span><span style="color:#000000">.buttonTitle = </span><span style="color:#a31515">&quot;Montrer&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        } </span><span style="color:#0000ff">else</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">          <span style="color:#000000">// mostra a mensagem</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          </span><span style="color:#0000ff">this</span><span style="color:#000000">.show = </span><span style="color:#0000ff">true</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          </span><span style="color:#0000ff">this</span><span style="color:#000000">.buttonTitle = </span><span style="color:#a31515">&quot;Cacher&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  };</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -1119,52 +1079,84 @@
 
 <p><strong>Comentários</strong></p>
 <ul>
-  <li>linha 3: a tag &lt;b-alert show&gt; exibe um retângulo colorido que normalmente contém texto (linha 6). O atributo<b> [variant] </b>permite selecionar um tipo de alerta. Cada tipo de alerta tem uma cor de fundo diferente. A cor da variante<b> [success] </b>é verde. O atributo<b> [align] </b>permite alinhar o texto do alerta (à esquerda, à direita ou centralizado). Note que o atributo<b> [show] </b>é obrigatório para exibir o alerta. Sem este atributo, o alerta não é visível;
+  <li>linhas 4-6: um alerta verde do Bootstrap. O número de colunas ocupadas não é indicado. Nesse caso, são utilizadas as 12 colunas do Bootstrap;
   </li>
-  <li>Valores possíveis para <b>[variant]</b>:
+  <li>linhas 8-10: um alerta amarelo do Bootstrap:
     <ul>
-      <li><b>[primary]</b>: azul;
+      <li>linha 8: a diretiva <b>[v-if] </b>de <b>[Vue.js] </b>controla a visibilidade de um bloco HTML. O alerta é aqui controlado por um valor booleano <b>[show] </b>(linha 29). Se <b>[show==true], </b>então o alerta será visível; caso contrário, não será;
       </li>
-      <li><b>[secondary]</b>: cinzento;
-      </li>
-      <li><b>[success]</b>: verde;
-      </li>
-      <li><b>[danger]</b>: vermelho claro;
-      </li>
-      <li><b>[aviso]</b>: amarelo;
-      </li>
-      <li><b>[informação]</b>: turquesa;
-      </li>
-      <li><b>[light]</b>: sem cor de fundo;
-      </li>
-      <li><b>[dark]</b>: cinzento ligeiramente mais escuro do que <b>[secondary]</b>;
+      <li>linha 9: o alerta exibe uma mensagem <b>[msg], </b>que é uma propriedade (linhas 20-22) do componente;
       </li>
     </ul>
   </li>
-  <li>linha 12: <b>[msg] </b>é um parâmetro do componente<b> [HelloBootstrap] </b>(linhas 21–23);
+  <li>linha 12: um botão azul no qual se clica para ocultar/mostrar o alerta <b>[warning]</b>;
+  </li>
+  <li>linhas 16-48: o código jS do componente. Este código define o funcionamento dinâmico do componente:
+  </li>
+  <li>linhas 20-22: as propriedades do componente;
+  </li>
+  <li>linhas 24-31: os atributos do componente;
   </li>
 </ul>
 
-<p>O resultado visual é o seguinte:</p>
-<p><img src="images/10000000000008FD000004463E55F670.png" width="304" height="145" style="width:8.05cm;height:3.828cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000008FD000004463E55F670.png" /></p>
+<p>Qual é a diferença entre <strong>[propriétés]</strong> e <strong>[attributs]</strong> de um componente, entre os campos <strong>[props]</strong> e <strong>[data]</strong> do objeto exportado pelo componente nas linhas 17-47?</p>
 <ul>
-  <li><b>[1]</b>: tag &lt;b-alert show variant=&#x27;success&#x27;&gt;;
+  <li>Como já vimos, as propriedades <b>[props] </b>de um componente são parâmetros do componente. Os seus valores são definidos a partir <b>do exterior </b>do componente. Um componente A que utilize um componente B com as propriedades <b>[prop1, prop2, ..., propn] </b>irá utilizá-lo da seguinte forma: <b>&lt;B :prop1=’val1’ :prop2=’val2’ ...&gt; </b>;
   </li>
-  <li><b>[2]</b>: tag &lt;b-alert show variant=&#x27;warning&#x27;&gt;;
-  </li>
-</ul>
-<p><a id="refheadingtoc2479612728496130"></a></p>
-<h2 id="45-executar-o-projeto">4.5. <span style="color: #4f81bd">Executar o projeto</span></h2>
-<p>Para executar o projeto, modifique primeiro o ficheiro <strong>[package.json]</strong>:</p>
-<p><img src="images/1000000000000735000001FF3D38ABB4.png" width="304" height="84" style="width:8.05cm;height:2.23cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000735000001FF3D38ABB4.png" /></p>
-<ul>
-  <li>em <b>[3]</b>, modifique o script executado pelo comando<b> [serve] [2] </b>no ficheiro package.json <b>[1]</b>;
-  </li>
-  <li>em <b>[4]</b>, execute o projeto;
+  <li>o objeto devolvido pela função <b>[data] </b>das linhas 24-31 representa o estado do componente ou <b>os atributos </b>do componente. Este estado é manipulado pelos métodos do componente (linhas 33-46). O &lt;template&gt; das linhas 1-14 utiliza tanto elementos <b>[propriétés] </b>como <b>[attributs]</b>:
+    <ul>
+      <li>os valores das propriedades são definidos por um componente pai;
+      </li>
+      <li>os valores dos atributos são definidos inicialmente pela função <b>[data] </b>e podem depois ser alterados pelos métodos;
+      </li>
+      <li>em ambos os casos, a representação visual <b>reage </b>imediatamente às alterações de uma propriedade (componente pai) ou de um atributo (método do componente). Fala-se, então, de uma interface <b>reativa</b>;
+      </li>
+    </ul>
   </li>
 </ul>
 
-<p><strong>Nota</strong>: A seguir, utilizaremos as tags do framework BootstrapVue, que têm o formato &lt;b-algo&gt;. Isto não é obrigatório. Pode utilizar as tags originais do framework Bootstrap. Elas funcionam em modelos <strong>[Vue.js]</strong>. Portanto, os programadores habituados às tags do Bootstrap podem continuar a utilizá-las.</p>
+<p>No <strong>[template]</strong> de um componente, não há diferença entre uma propriedade <strong>[prop]</strong> e um atributo <strong>[data]</strong>. Para saber se um dado dinâmico do <strong>[template]</strong> deve ser colocado no atributo <strong>[props]</strong> ou no objeto devolvido pela função <strong>[data]</strong>, basta perguntar-se quem define o valor desse dado:</p>
+<ul>
+  <li>se a resposta for o componente pai, então o dado será colocado no atributo <b>[props]</b>;
+  </li>
+  <li>se a resposta for o método que gere esse evento do componente, então o dado será colocado no objeto devolvido pela função <b>[data]</b>;
+  </li>
+</ul>
+
+<p>O <strong>[template]</strong> utiliza aqui os seguintes dados dinâmicos:</p>
+<ul>
+  <li><b>[show]</b>, linha 8. Este dado é processado internamente pelo método <b>[changer], </b>que gere o evento <b>[click] </b>no botão da linha 12. Trata-se, portanto, de um atributo criado pela função <b>[data] </b>(linha 29);
+  </li>
+  <li><b>[msg]</b>, linha 9. Trata-se de uma mensagem definida pelo componente pai. Por isso, é colocada no atributo <b>[props] </b>(linha 21);
+  </li>
+  <li><b>[buttonTitle], </b>linha 12. Este dado é processado internamente pelo método <b>[changer], </b>que gere o evento <b>[click] </b>no botão da linha 12. Trata-se, portanto, de um atributo criado pela função <b>[data] </b>(linha 27);
+  </li>
+  <li>os nomes dos atributos <b>[name, props, data, methods] </b>do objeto exportado pelo componente são predefinidos. Não é possível utilizar outros nomes;
+  </li>
+  <li>linha 12: o atributo <b>[@click] </b>do botão serve para designar o método que deve reagir ao clique no botão. Este método deve encontrar-se na propriedade <b>[methods] </b>do componente;
+  </li>
+  <li>linha 33: o atributo <b>[methods] </b>do componente reúne todos os seus métodos. Na maioria das vezes, trata-se de funções que respondem a um evento do componente;
+  </li>
+  <li>linhas 35-46: o método <b>[changer] </b>é chamado quando o utilizador clica no botão:
+    <ul>
+      <li>se o alerta <b>[warning] </b>estiver visível, é ocultado e o texto do botão passa a ser <b>[Montrer] </b>(linha 39);
+      </li>
+      <li>se o alerta <b>[warning] </b>estiver oculto, é exibido e o texto do botão passa a ser <b>[Cacher] </b>(linha 43);
+      </li>
+      <li>para exibir/ocultar o alerta <b>[warning]</b>, altera-se o valor do booleano <b>[show] </b>(linhas 38 e 42);
+      </li>
+      <li>quando um método precisa de referenciar o atributo <b>[attr] </b>devolvido pela função <b>[data]</b>, escreve-se <b>[this.attr] </b>(linhas 38 e 42). Isto significa que os atributos do objeto devolvido pela função <b>[data] </b>são atributos diretos do componente <b>[this]</b>;
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><span id="refheadingtoc2479712728496130" name="refheadingtoc2479712728496130" class="odt-bookmark-anchor"></span></p>
+<h2 id="54-execucao-do-projeto">5.4. <span style="color: #4f81bd">Execução do projeto</span></h2>
+<p><img src="images/10000000000003F6000002088D07FD55.png" width="304" height="156" style="width:8.05cm;height:4.12cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003F6000002088D07FD55.png" /></p>
+<p>O resultado é o seguinte:</p>
+<p><img src="images/10000000000007BE000004AC5B0CD135.png" width="495" height="299" style="width:13.109cm;height:7.909cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007BE000004AC5B0CD135.png" /></p>
+<p><img src="images/1000000000000779000003E8D46CB5CC.png" width="478" height="250" style="width:12.651cm;height:6.609cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000779000003E8D46CB5CC.png" /></p>
 
 
 
